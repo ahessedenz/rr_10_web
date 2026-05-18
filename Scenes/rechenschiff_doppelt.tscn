@@ -1,0 +1,194 @@
+[gd_scene load_steps=12 format=3 uid="uid://8lreot62cdu5"]
+
+[ext_resource type="Script" path="res://Scripts/Kreis.gd" id="1_00p17"]
+[ext_resource type="Script" path="res://Scripts/rechenschiff_doppelt.gd" id="1_xd54o"]
+[ext_resource type="AudioStream" uid="uid://buvudypvkad8w" path="res://Assets/sounds/LQ_Correct_Answer_03.wav" id="2_k8pcx"]
+[ext_resource type="AudioStream" uid="uid://dk43x8yrive2i" path="res://Assets/sounds/LQ_Wrong_Answer_02.wav" id="3_7xq0m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y21l3"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xaomo"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 170
+corner_radius_top_right = 170
+corner_radius_bottom_right = 170
+corner_radius_bottom_left = 170
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5ilt"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 170
+corner_radius_top_right = 170
+corner_radius_bottom_right = 170
+corner_radius_bottom_left = 170
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oech0"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 170
+corner_radius_top_right = 170
+corner_radius_bottom_right = 170
+corner_radius_bottom_left = 170
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0xny"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 170
+corner_radius_top_right = 170
+corner_radius_bottom_right = 170
+corner_radius_bottom_left = 170
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_my7uu"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 170
+corner_radius_top_right = 170
+corner_radius_bottom_right = 170
+corner_radius_bottom_left = 170
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_20bf2"]
+size = Vector2(1886, 752)
+
+[node name="RechenschiffDoppelt" type="Label" groups=["Eingabefeld"]]
+offset_right = 2006.0
+offset_bottom = 848.0
+mouse_filter = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_y21l3")
+script = ExtResource("1_xd54o")
+
+[node name="Kreis6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 71.0
+offset_right = 425.0
+offset_bottom = 408.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_xaomo")
+script = ExtResource("1_00p17")
+
+[node name="Kreis7" type="Label" parent="."]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 71.0
+offset_right = 794.0
+offset_bottom = 408.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_j5ilt")
+script = ExtResource("1_00p17")
+
+[node name="Kreis8" type="Label" parent="."]
+layout_mode = 0
+offset_left = 825.0
+offset_top = 71.0
+offset_right = 1162.0
+offset_bottom = 408.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_oech0")
+script = ExtResource("1_00p17")
+
+[node name="Kreis9" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1194.0
+offset_top = 71.0
+offset_right = 1531.0
+offset_bottom = 408.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_q0xny")
+script = ExtResource("1_00p17")
+
+[node name="Kreis10" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1563.0
+offset_top = 71.0
+offset_right = 1900.0
+offset_bottom = 408.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_my7uu")
+script = ExtResource("1_00p17")
+
+[node name="Kreis1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 440.0
+offset_right = 425.0
+offset_bottom = 777.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_xaomo")
+script = ExtResource("1_00p17")
+
+[node name="Kreis2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 440.0
+offset_right = 794.0
+offset_bottom = 777.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_j5ilt")
+script = ExtResource("1_00p17")
+
+[node name="Kreis3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 825.0
+offset_top = 440.0
+offset_right = 1162.0
+offset_bottom = 777.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_oech0")
+script = ExtResource("1_00p17")
+
+[node name="Kreis4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1194.0
+offset_top = 440.0
+offset_right = 1531.0
+offset_bottom = 777.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_q0xny")
+script = ExtResource("1_00p17")
+
+[node name="Kreis5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1563.0
+offset_top = 440.0
+offset_right = 1900.0
+offset_bottom = 777.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_my7uu")
+script = ExtResource("1_00p17")
+
+[node name="ResetTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Richtig" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_k8pcx")
+
+[node name="Falsch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7xq0m")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1004, 427)
+shape = SubResource("RectangleShape2D_20bf2")
+
+[connection signal="timeout" from="ResetTimer" to="." method="_on_reset_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

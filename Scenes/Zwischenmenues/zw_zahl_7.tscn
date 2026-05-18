@@ -1,0 +1,107 @@
+[gd_scene load_steps=9 format=3 uid="uid://da7bxenuskof2"]
+
+[ext_resource type="PackedScene" uid="uid://djg36nrbf8nu8" path="res://Scenes/Zwischenmenues/zwischenmenue.tscn" id="1_1al1v"]
+[ext_resource type="PackedScene" uid="uid://c6p14qk30x4gf" path="res://Scenes/menu_button_allg.tscn" id="2_hnhg7"]
+[ext_resource type="Texture2D" uid="uid://ccnj5o3shlwo0" path="res://Assets/bg/Rakete_cut.png" id="2_ihtcs"]
+[ext_resource type="Texture2D" uid="uid://vkp8877kyyc0" path="res://Assets/bg/Hund.png" id="3_nfai3"]
+[ext_resource type="PackedScene" uid="uid://4j2ntf6yp4th" path="res://Scenes/Popups/popup_rechnen_in_tabellen_bis_7.tscn" id="3_p32p1"]
+[ext_resource type="PackedScene" uid="uid://ds5tickkf0y4o" path="res://Scenes/Popups/popup_zerlegen_der_7.tscn" id="4_7rdqx"]
+[ext_resource type="Texture2D" uid="uid://muw8ljfe0nma" path="res://Assets/bg/Sternchen.png" id="4_jsrwq"]
+[ext_resource type="PackedScene" uid="uid://bop2yqv6i720b" path="res://Scenes/Popups/popup_addieren_subtrahieren_7.tscn" id="5_2i1v5"]
+
+[node name="zw_Zahl7" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Zwischenmenue" parent="." instance=ExtResource("1_1al1v")]
+layout_mode = 1
+titel = "Die Zahl 7"
+
+[node name="DesignGrafiken" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Rakete" type="TextureRect" parent="DesignGrafiken"]
+offset_left = 1700.0
+offset_top = 1194.0
+offset_right = 1930.0
+offset_bottom = 1494.0
+texture = ExtResource("2_ihtcs")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="Hund" type="TextureRect" parent="DesignGrafiken"]
+offset_left = 1600.0
+offset_top = 175.0
+offset_right = 1875.0
+offset_bottom = 450.0
+texture = ExtResource("3_nfai3")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="Sternchen1" type="TextureRect" parent="DesignGrafiken"]
+offset_left = 400.0
+offset_top = 1250.0
+offset_right = 470.0
+offset_bottom = 1320.0
+texture = ExtResource("4_jsrwq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sternchen2" type="TextureRect" parent="DesignGrafiken"]
+offset_left = 1800.0
+offset_top = 800.0
+offset_right = 1850.0
+offset_bottom = 850.0
+texture = ExtResource("4_jsrwq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MenuButton_allg1" parent="." instance=ExtResource("2_hnhg7")]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 550.0
+offset_right = 744.0
+offset_bottom = 1124.0
+string = "Zerlegen|der 7"
+seitenzahlen = "S. 41"
+link = ExtResource("4_7rdqx")
+
+[node name="MenuButton_allg2" parent="." instance=ExtResource("2_hnhg7")]
+layout_mode = 0
+offset_left = 794.0
+offset_top = 550.0
+offset_right = 1254.0
+offset_bottom = 1124.0
+string = "Addieren|und|Subtrahieren|bis 7"
+seitenzahlen = "S. 40"
+link = ExtResource("5_2i1v5")
+
+[node name="MenuButton_allg3" parent="." instance=ExtResource("2_hnhg7")]
+layout_mode = 0
+offset_left = 1304.0
+offset_top = 550.0
+offset_right = 1764.0
+offset_bottom = 1124.0
+string = "Rechnen|in|Tabellen"
+seitenzahlen = "S. 40"
+link = ExtResource("3_p32p1")
+
+[node name="MenuButton_allg4" parent="." instance=ExtResource("2_hnhg7")]
+visible = false
+layout_mode = 0
+offset_left = 1529.0
+offset_top = 550.0
+offset_right = 1989.0
+offset_bottom = 1124.0
+string = "Rechnen|mit Mauern|bis 8"
+seitenzahlen = "S. 45"
+inactive = true

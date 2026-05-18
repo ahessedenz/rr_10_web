@@ -1,0 +1,188 @@
+[gd_scene load_steps=12 format=3 uid="uid://cauforviypr52"]
+
+[ext_resource type="Script" path="res://Scripts/Kreis.gd" id="1_gc0x6"]
+[ext_resource type="Script" path="res://Scripts/rechenschiff_subtraktion.gd" id="1_vbqk2"]
+[ext_resource type="AudioStream" uid="uid://buvudypvkad8w" path="res://Assets/sounds/LQ_Correct_Answer_03.wav" id="2_aiceo"]
+[ext_resource type="AudioStream" uid="uid://dk43x8yrive2i" path="res://Assets/sounds/LQ_Wrong_Answer_02.wav" id="3_3e1tl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75ar0"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qrawe"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 170
+corner_radius_top_right = 170
+corner_radius_bottom_right = 170
+corner_radius_bottom_left = 170
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x3go6"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 170
+corner_radius_top_right = 170
+corner_radius_bottom_right = 170
+corner_radius_bottom_left = 170
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eat7f"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 170
+corner_radius_top_right = 170
+corner_radius_bottom_right = 170
+corner_radius_bottom_left = 170
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tf8i7"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 170
+corner_radius_top_right = 170
+corner_radius_bottom_right = 170
+corner_radius_bottom_left = 170
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0fila"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 170
+corner_radius_top_right = 170
+corner_radius_bottom_right = 170
+corner_radius_bottom_left = 170
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3yilr"]
+size = Vector2(1917, 420)
+
+[node name="RechenschiffSubtraktion" type="Label" groups=["Eingabefeld"]]
+offset_right = 2006.0
+offset_bottom = 484.0
+mouse_filter = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_75ar0")
+script = ExtResource("1_vbqk2")
+
+[node name="Kreis1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 71.0
+offset_right = 425.0
+offset_bottom = 408.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qrawe")
+script = ExtResource("1_gc0x6")
+
+[node name="Kreis2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 71.0
+offset_right = 794.0
+offset_bottom = 408.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_x3go6")
+script = ExtResource("1_gc0x6")
+
+[node name="Kreis3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 825.0
+offset_top = 71.0
+offset_right = 1162.0
+offset_bottom = 408.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_eat7f")
+script = ExtResource("1_gc0x6")
+
+[node name="Kreis4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1194.0
+offset_top = 71.0
+offset_right = 1531.0
+offset_bottom = 408.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_tf8i7")
+script = ExtResource("1_gc0x6")
+
+[node name="Kreis5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1563.0
+offset_top = 71.0
+offset_right = 1900.0
+offset_bottom = 408.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0fila")
+script = ExtResource("1_gc0x6")
+
+[node name="Gestrichen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="K1gestrichen" type="Line2D" parent="Gestrichen"]
+points = PackedVector2Array(100, 425, 425, 50)
+width = 50.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="K2gestrichen" type="Line2D" parent="Gestrichen"]
+position = Vector2(370, 0)
+points = PackedVector2Array(100, 425, 425, 50)
+width = 50.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="K3gestrichen" type="Line2D" parent="Gestrichen"]
+position = Vector2(734, 0)
+points = PackedVector2Array(100, 425, 425, 50)
+width = 50.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="K4gestrichen" type="Line2D" parent="Gestrichen"]
+position = Vector2(1106, 0)
+points = PackedVector2Array(100, 425, 425, 50)
+width = 50.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="K5gestrichen" type="Line2D" parent="Gestrichen"]
+position = Vector2(1475, 0)
+points = PackedVector2Array(100, 425, 425, 50)
+width = 50.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="ResetTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="DelayTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Richtig" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_aiceo")
+
+[node name="Falsch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3e1tl")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(995.5, 238)
+shape = SubResource("RectangleShape2D_3yilr")
+
+[connection signal="timeout" from="ResetTimer" to="." method="_on_reset_timer_timeout"]
+[connection signal="timeout" from="DelayTimer" to="." method="_on_delay_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

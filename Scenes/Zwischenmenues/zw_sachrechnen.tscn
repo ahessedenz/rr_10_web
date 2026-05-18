@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://bq3oo670qa7k6"]
+
+[ext_resource type="PackedScene" uid="uid://djg36nrbf8nu8" path="res://Scenes/Zwischenmenues/zwischenmenue.tscn" id="1_qdm3q"]
+[ext_resource type="PackedScene" uid="uid://c6p14qk30x4gf" path="res://Scenes/menu_button_allg.tscn" id="2_rtdc3"]
+[ext_resource type="Texture2D" uid="uid://eg1pphelrmbq" path="res://Assets/bg/Klaus.png" id="2_yaolm"]
+[ext_resource type="Texture2D" uid="uid://muw8ljfe0nma" path="res://Assets/bg/Sternchen.png" id="3_6vsuo"]
+[ext_resource type="PackedScene" uid="uid://bgo7f8orvrvjo" path="res://Scenes/Tasks/Sachrechnen/sachrechnen_6.tscn" id="3_ut47d"]
+[ext_resource type="PackedScene" uid="uid://c2gcgu1xiehfo" path="res://Scenes/Tasks/Sachrechnen/sachrechnen_8.tscn" id="4_e2dfl"]
+[ext_resource type="PackedScene" uid="uid://dxalocijcjwv5" path="res://Scenes/Tasks/Sachrechnen/sachrechnen_10.tscn" id="5_mq0ax"]
+
+[node name="zw_Sachrechnen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Zwischenmenue" parent="." instance=ExtResource("1_qdm3q")]
+layout_mode = 1
+titel = "Sachrechnen"
+
+[node name="DesignGrafiken" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Klaus" type="TextureRect" parent="DesignGrafiken"]
+offset_left = 1600.0
+offset_top = 175.0
+offset_right = 1875.0
+offset_bottom = 450.0
+texture = ExtResource("2_yaolm")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="Sternchen1" type="TextureRect" parent="DesignGrafiken"]
+offset_left = 400.0
+offset_top = 1250.0
+offset_right = 470.0
+offset_bottom = 1320.0
+texture = ExtResource("3_6vsuo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sternchen2" type="TextureRect" parent="DesignGrafiken"]
+offset_left = 1800.0
+offset_top = 800.0
+offset_right = 1850.0
+offset_bottom = 850.0
+texture = ExtResource("3_6vsuo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MenuButton_allg1" parent="." instance=ExtResource("2_rtdc3")]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 550.0
+offset_right = 744.0
+offset_bottom = 1124.0
+string = "Sachrechnen|bis 6"
+seitenzahlen = "S. 34"
+link = ExtResource("3_ut47d")
+
+[node name="MenuButton_allg2" parent="." instance=ExtResource("2_rtdc3")]
+layout_mode = 0
+offset_left = 794.0
+offset_top = 550.0
+offset_right = 1254.0
+offset_bottom = 1124.0
+string = "Sachrechnen|bis 8"
+seitenzahlen = "S. 46"
+link = ExtResource("4_e2dfl")
+
+[node name="MenuButton_allg3" parent="." instance=ExtResource("2_rtdc3")]
+layout_mode = 0
+offset_left = 1304.0
+offset_top = 550.0
+offset_right = 1764.0
+offset_bottom = 1124.0
+string = "Sachrechnen|bis 10"
+seitenzahlen = "S. 58"
+link = ExtResource("5_mq0ax")

@@ -1,0 +1,474 @@
+[gd_scene load_steps=16 format=3 uid="uid://b25nx0mr1iky5"]
+
+[ext_resource type="PackedScene" uid="uid://c25sapn44hngq" path="res://Scenes/Popups/popup_hintergrund.tscn" id="1_83sqq"]
+[ext_resource type="PackedScene" uid="uid://c6p14qk30x4gf" path="res://Scenes/menu_button_allg.tscn" id="2_wu2qr"]
+[ext_resource type="PackedScene" uid="uid://b0e31s2clcpfg" path="res://Scenes/Tasks/Einfuehrung_Subtraktion/einfuehrung_subtraktion_1.tscn" id="3_ruv5a"]
+[ext_resource type="Texture2D" uid="uid://jiapa41yy4t4" path="res://Assets/Mengen/Schiff_2.png" id="4_3mwpa"]
+[ext_resource type="Theme" uid="uid://pvywg5bjxo2y" path="res://Theme/label.tres" id="5_nnd86"]
+[ext_resource type="PackedScene" uid="uid://cxyb8agse34ql" path="res://Scenes/Tasks/Einfuehrung_Subtraktion/einfuehrung_subtraktion_2.tscn" id="6_uxl0b"]
+[ext_resource type="Texture2D" uid="uid://dheq2urdgay34" path="res://Assets/Mengen/Schiff_3.png" id="7_88ikl"]
+[ext_resource type="Texture2D" uid="uid://duoevph8v45lk" path="res://Assets/arrow/arrow.png" id="8_vw8wu"]
+[ext_resource type="PackedScene" uid="uid://bbfy6bg2l70gq" path="res://Scenes/Tasks/Einfuehrung_Subtraktion/einfuehrung_subtraktion_3.tscn" id="9_snvhk"]
+[ext_resource type="Texture2D" uid="uid://byuhvjt2vi51s" path="res://Assets/Mengen/Schiff_0.png" id="10_kbc4d"]
+[ext_resource type="PackedScene" uid="uid://cdcgde4gijirb" path="res://Scenes/Tasks/Einfuehrung_Subtraktion/einfuehrung_subtraktion_4.tscn" id="11_ni8sh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34jjb"]
+bg_color = Color(1, 0.87451, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_juw5i"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c0lh1"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_do1im"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="Popup_EinfuehrungSubtraktion" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Popup_Hintergrund" parent="." instance=ExtResource("1_83sqq")]
+layout_mode = 1
+titel = "Einführung der Subtraktion"
+
+[node name="MenuButton_allg1" parent="." instance=ExtResource("2_wu2qr")]
+offset_left = 75.0
+offset_top = 350.0
+offset_right = 535.0
+offset_bottom = 924.0
+scale = Vector2(0.6, 0.6)
+link = ExtResource("3_ruv5a")
+sterne = 1
+
+[node name="Panel" type="Panel" parent="MenuButton_allg1"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 110.0
+offset_right = 400.0
+offset_bottom = 360.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_34jjb")
+
+[node name="Schiff" type="TextureRect" parent="MenuButton_allg1/Panel"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 50.0
+offset_right = 295.0
+offset_bottom = 104.0
+texture = ExtResource("4_3mwpa")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuButton_allg1/Panel"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 125.0
+offset_right = 105.0
+offset_bottom = 205.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_juw5i")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="MenuButton_allg1/Panel/Label"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 100.0
+offset_bottom = 105.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButton_allg2" parent="." instance=ExtResource("2_wu2qr")]
+offset_left = 376.0
+offset_top = 350.0
+offset_right = 836.0
+offset_bottom = 924.0
+scale = Vector2(0.6, 0.6)
+link = ExtResource("6_uxl0b")
+sterne = 2
+
+[node name="Panel" type="Panel" parent="MenuButton_allg2"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 110.0
+offset_right = 400.0
+offset_bottom = 360.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_34jjb")
+
+[node name="Schiff" type="TextureRect" parent="MenuButton_allg2/Panel"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 50.0
+offset_right = 295.0
+offset_bottom = 104.0
+texture = ExtResource("7_88ikl")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuButton_allg2/Panel"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 125.0
+offset_right = 105.0
+offset_bottom = 205.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_juw5i")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="MenuButton_allg2/Panel/Label"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 80.0
+offset_bottom = 85.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 60
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pfeil" type="TextureRect" parent="MenuButton_allg2/Panel"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 156.667
+offset_right = 227.0
+offset_bottom = 196.667
+texture = ExtResource("8_vw8wu")
+expand_mode = 1
+
+[node name="Minus" type="Label" parent="MenuButton_allg2/Panel"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 135.0
+offset_right = 155.0
+offset_bottom = 165.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c0lh1")
+
+[node name="Label" type="Label" parent="MenuButton_allg2/Panel/Minus"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -1.5
+offset_right = 36.0
+offset_bottom = 35.5
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 30
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Summand2" type="Label" parent="MenuButton_allg2/Panel"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 130.0
+offset_right = 205.0
+offset_bottom = 170.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_do1im")
+
+[node name="Label" type="Label" parent="MenuButton_allg2/Panel/Summand2"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 40.0
+offset_bottom = 42.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 25
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MenuButton_allg2/Panel"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 125.0
+offset_right = 315.0
+offset_bottom = 205.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_juw5i")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="MenuButton_allg2/Panel/Label2"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 80.0
+offset_bottom = 85.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButton_allg3" parent="." instance=ExtResource("2_wu2qr")]
+offset_left = 677.0
+offset_top = 350.0
+offset_right = 1137.0
+offset_bottom = 924.0
+scale = Vector2(0.6, 0.6)
+link = ExtResource("9_snvhk")
+sterne = 3
+
+[node name="Panel" type="Panel" parent="MenuButton_allg3"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 110.0
+offset_right = 400.0
+offset_bottom = 360.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_34jjb")
+
+[node name="Schiff" type="TextureRect" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 50.0
+offset_right = 295.0
+offset_bottom = 104.0
+texture = ExtResource("10_kbc4d")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 125.0
+offset_right = 105.0
+offset_bottom = 205.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_juw5i")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="MenuButton_allg3/Panel/Label"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 80.0
+offset_bottom = 85.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 60
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pfeil" type="TextureRect" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 156.667
+offset_right = 227.0
+offset_bottom = 196.667
+texture = ExtResource("8_vw8wu")
+expand_mode = 1
+
+[node name="Minus" type="Label" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 135.0
+offset_right = 155.0
+offset_bottom = 165.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c0lh1")
+
+[node name="Label" type="Label" parent="MenuButton_allg3/Panel/Minus"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -1.5
+offset_right = 36.0
+offset_bottom = 29.5
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 30
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Summand2" type="Label" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 130.0
+offset_right = 205.0
+offset_bottom = 170.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_do1im")
+
+[node name="Label" type="Label" parent="MenuButton_allg3/Panel/Summand2"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 40.0
+offset_bottom = 42.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 25
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 125.0
+offset_right = 315.0
+offset_bottom = 205.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_juw5i")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="MenuButton_allg3/Panel/Label2"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 80.0
+offset_bottom = 85.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButton_allg4" parent="." instance=ExtResource("2_wu2qr")]
+offset_left = 978.0
+offset_top = 350.0
+offset_right = 1438.0
+offset_bottom = 924.0
+scale = Vector2(0.6, 0.6)
+link = ExtResource("11_ni8sh")
+sterne = 4
+
+[node name="Panel" type="Panel" parent="MenuButton_allg4"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 110.0
+offset_right = 413.0
+offset_bottom = 360.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_34jjb")
+
+[node name="Label" type="Label" parent="MenuButton_allg4/Panel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 87.0
+offset_right = 90.0
+offset_bottom = 162.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxFlat_juw5i")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="MenuButton_allg4/Panel/Label"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 75.0
+offset_bottom = 80.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 60
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Minus" type="Label" parent="MenuButton_allg4/Panel"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 100.0
+offset_right = 145.0
+offset_bottom = 150.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_c0lh1")
+
+[node name="Label" type="Label" parent="MenuButton_allg4/Panel/Minus"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -6.0
+offset_right = 48.0
+offset_bottom = 67.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 60
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Summand2" type="Label" parent="MenuButton_allg4/Panel"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 87.0
+offset_right = 225.0
+offset_bottom = 162.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_do1im")
+
+[node name="Label" type="Label" parent="MenuButton_allg4/Panel/Summand2"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 75.0
+offset_bottom = 80.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 60
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gleich" type="Label" parent="MenuButton_allg4/Panel"]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 103.0
+offset_right = 270.0
+offset_bottom = 152.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 40
+text = "="
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MenuButton_allg4/Panel"]
+layout_mode = 0
+offset_left = 275.0
+offset_top = 87.0
+offset_right = 350.0
+offset_bottom = 164.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_juw5i")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="MenuButton_allg4/Panel/Label2"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 80.0
+offset_bottom = 85.0
+theme = ExtResource("5_nnd86")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1

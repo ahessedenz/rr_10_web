@@ -1,0 +1,106 @@
+[gd_scene load_steps=9 format=3 uid="uid://duc3rxecjd53n"]
+
+[ext_resource type="Script" path="res://Scripts/kugel_button.gd" id="1_geeuw"]
+[ext_resource type="Texture2D" uid="uid://ox3nf3bb1g7a" path="res://Assets/Handspiel/Hand_offen_rechts.png" id="2_t8pnf"]
+[ext_resource type="Texture2D" uid="uid://bsafagyoklhtl" path="res://Assets/Handspiel/Kugel.png" id="3_rsu5r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l5al2"]
+bg_color = Color(0.27451, 0.27451, 0.27451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irsrl"]
+bg_color = Color(0.27451, 0.27451, 0.27451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e3eu4"]
+bg_color = Color(0.27451, 0.27451, 0.27451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cfgf1"]
+bg_color = Color(0.27451, 0.27451, 0.27451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_63xut"]
+size = Vector2(250, 250)
+
+[node name="KugelButton" type="Button" groups=["Button"]]
+offset_right = 250.0
+offset_bottom = 250.0
+focus_mode = 0
+theme_override_styles/focus = SubResource("StyleBoxFlat_l5al2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_irsrl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e3eu4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cfgf1")
+script = ExtResource("1_geeuw")
+
+[node name="Hand" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 250.0
+offset_bottom = 250.0
+texture = ExtResource("2_t8pnf")
+expand_mode = 1
+
+[node name="Kugel1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 146.0
+offset_right = 97.0
+offset_bottom = 181.0
+texture = ExtResource("3_rsu5r")
+expand_mode = 1
+
+[node name="Kugel2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 127.0
+offset_right = 156.0
+offset_bottom = 162.0
+texture = ExtResource("3_rsu5r")
+expand_mode = 1
+
+[node name="Kugel3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 211.0
+offset_right = 117.0
+offset_bottom = 246.0
+texture = ExtResource("3_rsu5r")
+expand_mode = 1
+
+[node name="Kugel4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 180.0
+offset_right = 170.0
+offset_bottom = 215.0
+texture = ExtResource("3_rsu5r")
+expand_mode = 1
+
+[node name="Kugel5" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 170.0
+offset_right = 132.0
+offset_bottom = 205.0
+texture = ExtResource("3_rsu5r")
+expand_mode = 1
+
+[node name="Area2D" type="Area2D" parent="." groups=["Button"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(125, 125)
+shape = SubResource("RectangleShape2D_63xut")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]

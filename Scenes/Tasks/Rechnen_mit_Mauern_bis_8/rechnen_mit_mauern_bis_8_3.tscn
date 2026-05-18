@@ -1,0 +1,348 @@
+[gd_scene load_steps=9 format=3 uid="uid://dd074njooyo8i"]
+
+[ext_resource type="PackedScene" uid="uid://3fdma24dkgqp" path="res://Scenes/aufgaben_grundgeruest.tscn" id="1_60o36"]
+[ext_resource type="Script" path="res://Scripts/rechnen_mit_mauern_bis_8_3.gd" id="1_a17q6"]
+[ext_resource type="Texture2D" uid="uid://dcl2pcf53675i" path="res://Assets/Zahlenmauer/Zahlenmauer_Klotz_freigestellt.png" id="2_nf4s2"]
+[ext_resource type="Texture2D" uid="uid://muw8ljfe0nma" path="res://Assets/bg/Sternchen.png" id="3_c6uy5"]
+[ext_resource type="Theme" uid="uid://pvywg5bjxo2y" path="res://Theme/label.tres" id="3_doe2e"]
+[ext_resource type="PackedScene" uid="uid://b8eyh5e47d66r" path="res://Scenes/eingabefeld_zahl.tscn" id="4_8e7lu"]
+[ext_resource type="PackedScene" uid="uid://edj216owcc58" path="res://Scenes/zahl_button.tscn" id="5_sjp1n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q06db"]
+bg_color = Color(0, 0, 0, 0.392157)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="RechnenMitMauernBis8_3" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a17q6")
+
+[node name="AufgabenGrundgeruest" parent="." instance=ExtResource("1_60o36")]
+layout_mode = 1
+
+[node name="Hintergrundbilder" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sternchen1" type="TextureRect" parent="Hintergrundbilder"]
+offset_left = 150.0
+offset_top = 331.0
+offset_right = 234.0
+offset_bottom = 422.0
+texture = ExtResource("3_c6uy5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sternchen2" type="TextureRect" parent="Hintergrundbilder"]
+offset_left = 1800.0
+offset_top = 900.0
+offset_right = 1860.0
+offset_bottom = 960.0
+texture = ExtResource("3_c6uy5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AufgabenPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 300.0
+offset_right = 1567.0
+offset_bottom = 1083.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_q06db")
+
+[node name="MauerGrafiken" type="Control" parent="AufgabenPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BlockUntenLinks" type="TextureRect" parent="AufgabenPanel/MauerGrafiken"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 526.0
+offset_right = 265.0
+offset_bottom = 670.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_nf4s2")
+
+[node name="Label" type="Label" parent="AufgabenPanel/MauerGrafiken/BlockUntenLinks"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 48.0
+offset_right = 143.0
+offset_bottom = 151.0
+theme = ExtResource("3_doe2e")
+theme_override_font_sizes/font_size = 80
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BlockUntenMitteLinks" type="TextureRect" parent="AufgabenPanel/MauerGrafiken"]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 526.0
+offset_right = 484.0
+offset_bottom = 670.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_nf4s2")
+
+[node name="Label" type="Label" parent="AufgabenPanel/MauerGrafiken/BlockUntenMitteLinks"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 48.0
+offset_right = 143.0
+offset_bottom = 151.0
+theme = ExtResource("3_doe2e")
+theme_override_font_sizes/font_size = 80
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BlockUntenMitteRechts" type="TextureRect" parent="AufgabenPanel/MauerGrafiken"]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 526.0
+offset_right = 703.0
+offset_bottom = 670.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_nf4s2")
+
+[node name="Label" type="Label" parent="AufgabenPanel/MauerGrafiken/BlockUntenMitteRechts"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 48.0
+offset_right = 143.0
+offset_bottom = 151.0
+theme = ExtResource("3_doe2e")
+theme_override_font_sizes/font_size = 80
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BlockUntenRechts" type="TextureRect" parent="AufgabenPanel/MauerGrafiken"]
+layout_mode = 0
+offset_left = 722.0
+offset_top = 526.0
+offset_right = 922.0
+offset_bottom = 670.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_nf4s2")
+
+[node name="Label" type="Label" parent="AufgabenPanel/MauerGrafiken/BlockUntenRechts"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 48.0
+offset_right = 143.0
+offset_bottom = 151.0
+theme = ExtResource("3_doe2e")
+theme_override_font_sizes/font_size = 80
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BlockMitteLinks" type="TextureRect" parent="AufgabenPanel/MauerGrafiken"]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 364.0
+offset_right = 372.0
+offset_bottom = 508.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_nf4s2")
+
+[node name="Eingabefeld_Zahl" parent="AufgabenPanel/MauerGrafiken/BlockMitteLinks" node_paths=PackedStringArray("next") instance=ExtResource("4_8e7lu")]
+layout_mode = 0
+offset_left = 1.33334
+offset_top = 36.6667
+offset_right = 161.333
+offset_bottom = 196.667
+scale = Vector2(0.6, 0.6)
+laenge = 1
+next = NodePath("../../BlockMitteMitte/Eingabefeld_Zahl")
+zahlenmauer = true
+
+[node name="BlockMitteMitte" type="TextureRect" parent="AufgabenPanel/MauerGrafiken"]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 364.0
+offset_right = 591.0
+offset_bottom = 508.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_nf4s2")
+
+[node name="Eingabefeld_Zahl" parent="AufgabenPanel/MauerGrafiken/BlockMitteMitte" node_paths=PackedStringArray("next") instance=ExtResource("4_8e7lu")]
+layout_mode = 0
+offset_left = 1.33331
+offset_top = 36.6667
+offset_right = 161.333
+offset_bottom = 196.667
+scale = Vector2(0.6, 0.6)
+laenge = 1
+next = NodePath("../../BlockMitteRechts/Eingabefeld_Zahl")
+zahlenmauer = true
+
+[node name="BlockMitteRechts" type="TextureRect" parent="AufgabenPanel/MauerGrafiken"]
+layout_mode = 0
+offset_left = 610.0
+offset_top = 364.0
+offset_right = 810.0
+offset_bottom = 508.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_nf4s2")
+
+[node name="Eingabefeld_Zahl" parent="AufgabenPanel/MauerGrafiken/BlockMitteRechts" node_paths=PackedStringArray("next") instance=ExtResource("4_8e7lu")]
+layout_mode = 0
+offset_left = 1.33334
+offset_top = 36.6667
+offset_right = 161.333
+offset_bottom = 196.667
+scale = Vector2(0.6, 0.6)
+laenge = 1
+next = NodePath("../../BlockObenLinks/Eingabefeld_Zahl")
+zahlenmauer = true
+
+[node name="BlockObenLinks" type="TextureRect" parent="AufgabenPanel/MauerGrafiken"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 201.0
+offset_right = 479.0
+offset_bottom = 345.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_nf4s2")
+
+[node name="Eingabefeld_Zahl" parent="AufgabenPanel/MauerGrafiken/BlockObenLinks" node_paths=PackedStringArray("next") instance=ExtResource("4_8e7lu")]
+layout_mode = 0
+offset_left = 1.33334
+offset_top = 36.6667
+offset_right = 161.333
+offset_bottom = 196.667
+scale = Vector2(0.6, 0.6)
+laenge = 1
+next = NodePath("../../BlockObenRechts/Eingabefeld_Zahl")
+zahlenmauer = true
+
+[node name="BlockObenRechts" type="TextureRect" parent="AufgabenPanel/MauerGrafiken"]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 201.0
+offset_right = 698.0
+offset_bottom = 345.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_nf4s2")
+
+[node name="Eingabefeld_Zahl" parent="AufgabenPanel/MauerGrafiken/BlockObenRechts" node_paths=PackedStringArray("next") instance=ExtResource("4_8e7lu")]
+layout_mode = 0
+offset_left = 1.33334
+offset_top = 36.6667
+offset_right = 161.333
+offset_bottom = 196.667
+scale = Vector2(0.6, 0.6)
+laenge = 1
+next = NodePath("../../BlockSpitze/Eingabefeld_Zahl")
+zahlenmauer = true
+
+[node name="BlockSpitze" type="TextureRect" parent="AufgabenPanel/MauerGrafiken"]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 39.0
+offset_right = 586.0
+offset_bottom = 183.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_nf4s2")
+
+[node name="Eingabefeld_Zahl" parent="AufgabenPanel/MauerGrafiken/BlockSpitze" instance=ExtResource("4_8e7lu")]
+layout_mode = 0
+offset_left = 1.33334
+offset_top = 36.6667
+offset_right = 161.333
+offset_bottom = 196.667
+scale = Vector2(0.6, 0.6)
+laenge = 1
+zahlenmauer = true
+
+[node name="Zahlbuttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ZahlButton0" parent="Zahlbuttons" instance=ExtResource("5_sjp1n")]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 1200.0
+offset_right = 384.0
+offset_bottom = 1360.0
+index = "0"
+
+[node name="ZahlButton1" parent="Zahlbuttons" instance=ExtResource("5_sjp1n")]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 1200.0
+offset_right = 564.0
+offset_bottom = 1360.0
+index = "1"
+
+[node name="ZahlButton2" parent="Zahlbuttons" instance=ExtResource("5_sjp1n")]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 1200.0
+offset_right = 744.0
+offset_bottom = 1360.0
+index = "2"
+
+[node name="ZahlButton3" parent="Zahlbuttons" instance=ExtResource("5_sjp1n")]
+layout_mode = 0
+offset_left = 764.0
+offset_top = 1200.0
+offset_right = 924.0
+offset_bottom = 1360.0
+index = "3"
+
+[node name="ZahlButton4" parent="Zahlbuttons" instance=ExtResource("5_sjp1n")]
+layout_mode = 0
+offset_left = 944.0
+offset_top = 1200.0
+offset_right = 1104.0
+offset_bottom = 1360.0
+index = "4"
+
+[node name="ZahlButton5" parent="Zahlbuttons" instance=ExtResource("5_sjp1n")]
+layout_mode = 0
+offset_left = 1124.0
+offset_top = 1200.0
+offset_right = 1284.0
+offset_bottom = 1360.0
+index = "5"
+
+[node name="ZahlButton6" parent="Zahlbuttons" instance=ExtResource("5_sjp1n")]
+layout_mode = 0
+offset_left = 1304.0
+offset_top = 1200.0
+offset_right = 1464.0
+offset_bottom = 1360.0
+index = "6"
+
+[node name="ZahlButton7" parent="Zahlbuttons" instance=ExtResource("5_sjp1n")]
+layout_mode = 0
+offset_left = 1484.0
+offset_top = 1200.0
+offset_right = 1644.0
+offset_bottom = 1360.0
+index = "7"
+
+[node name="ZahlButton8" parent="Zahlbuttons" instance=ExtResource("5_sjp1n")]
+layout_mode = 0
+offset_left = 1664.0
+offset_top = 1200.0
+offset_right = 1824.0
+offset_bottom = 1360.0
+index = "8"

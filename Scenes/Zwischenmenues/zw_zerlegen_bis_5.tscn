@@ -1,0 +1,87 @@
+[gd_scene load_steps=8 format=3 uid="uid://dph61axn5tbx3"]
+
+[ext_resource type="PackedScene" uid="uid://djg36nrbf8nu8" path="res://Scenes/Zwischenmenues/zwischenmenue.tscn" id="1_emkj1"]
+[ext_resource type="PackedScene" uid="uid://c6p14qk30x4gf" path="res://Scenes/menu_button_allg.tscn" id="2_5o8iw"]
+[ext_resource type="Texture2D" uid="uid://bxaft8epjc82d" path="res://Assets/bg/Ufo1.png" id="2_jxg3h"]
+[ext_resource type="PackedScene" uid="uid://bb4wvopbrmoyq" path="res://Scenes/Popups/popup_handspiel_4.tscn" id="3_mitvb"]
+[ext_resource type="Texture2D" uid="uid://muw8ljfe0nma" path="res://Assets/bg/Sternchen.png" id="3_xwwfj"]
+[ext_resource type="PackedScene" uid="uid://8c5precbjn1g" path="res://Scenes/Popups/popup_schuettelbox_5.tscn" id="4_pmeve"]
+[ext_resource type="PackedScene" uid="uid://5becriydp68c" path="res://Scenes/Tasks/Haus_der_3-4-5/haus_der_345.tscn" id="5_qnj02"]
+
+[node name="zw_ZerlegenBis5" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Zwischenmenue" parent="." instance=ExtResource("1_emkj1")]
+layout_mode = 1
+titel = "Zerlegen der Zahlen bis 5"
+
+[node name="DesignGrafiken" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Ufo" type="TextureRect" parent="DesignGrafiken"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 150.0
+offset_right = 475.0
+offset_bottom = 425.0
+texture = ExtResource("2_jxg3h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sternchen1" type="TextureRect" parent="DesignGrafiken"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 1250.0
+offset_right = 470.0
+offset_bottom = 1320.0
+texture = ExtResource("3_xwwfj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sternchen2" type="TextureRect" parent="DesignGrafiken"]
+layout_mode = 0
+offset_left = 1800.0
+offset_top = 800.0
+offset_right = 1850.0
+offset_bottom = 850.0
+texture = ExtResource("3_xwwfj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MenuButton_allg1" parent="." instance=ExtResource("2_5o8iw")]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 550.0
+offset_right = 744.0
+offset_bottom = 1124.0
+string = "Handspiel|bis 4"
+seitenzahlen = "S. 13"
+link = ExtResource("3_mitvb")
+
+[node name="MenuButton_allg2" parent="." instance=ExtResource("2_5o8iw")]
+layout_mode = 0
+offset_left = 794.0
+offset_top = 550.0
+offset_right = 1254.0
+offset_bottom = 1124.0
+string = "Schüttelbox|bis 5"
+seitenzahlen = "S. 16-17"
+link = ExtResource("4_pmeve")
+
+[node name="MenuButton_allg3" parent="." instance=ExtResource("2_5o8iw")]
+layout_mode = 0
+offset_left = 1304.0
+offset_top = 550.0
+offset_right = 1764.0
+offset_bottom = 1124.0
+string = "Zahlenhäuser|bis 5"
+seitenzahlen = "S. 17"
+link = ExtResource("5_qnj02")

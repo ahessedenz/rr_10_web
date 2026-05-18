@@ -1,0 +1,384 @@
+[gd_scene load_steps=18 format=3 uid="uid://ds5tickkf0y4o"]
+
+[ext_resource type="PackedScene" uid="uid://c25sapn44hngq" path="res://Scenes/Popups/popup_hintergrund.tscn" id="1_mvrl3"]
+[ext_resource type="PackedScene" uid="uid://c6p14qk30x4gf" path="res://Scenes/menu_button_allg.tscn" id="2_pd5ue"]
+[ext_resource type="PackedScene" uid="uid://bmpu0pcwenulv" path="res://Scenes/Tasks/Zerlegen_der_7/zerlegen_der_7_1.tscn" id="3_f1300"]
+[ext_resource type="Theme" uid="uid://pvywg5bjxo2y" path="res://Theme/label.tres" id="4_pfrnu"]
+[ext_resource type="Texture2D" uid="uid://bsafagyoklhtl" path="res://Assets/Handspiel/Kugel.png" id="5_23oxn"]
+[ext_resource type="PackedScene" uid="uid://otilyproi7j2" path="res://Scenes/Tasks/Zerlegen_der_7/zerlegen_der_7_2.tscn" id="6_wx1cj"]
+[ext_resource type="PackedScene" uid="uid://47bt07lutxvh" path="res://Scenes/Tasks/Zerlegen_der_7/zerlegen_der_7_3.tscn" id="7_2pw0u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u41is"]
+bg_color = Color(1, 0.87451, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wvfk"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wcngf"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rpe77"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ltr1"]
+bg_color = Color(1, 0.87451, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndbtq"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fvytq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tpcg5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3im3t"]
+bg_color = Color(1, 0.87451, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i078a"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="Popup_ZerlegenDer7" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Popup_Hintergrund" parent="." instance=ExtResource("1_mvrl3")]
+layout_mode = 1
+titel = "Zerlegen der 7"
+
+[node name="MenuButton_allg1" parent="." instance=ExtResource("2_pd5ue")]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 350.0
+offset_right = 661.0
+offset_bottom = 924.0
+scale = Vector2(0.6, 0.6)
+link = ExtResource("3_f1300")
+sterne = 1
+
+[node name="Panel" type="Panel" parent="MenuButton_allg1"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 100.0
+offset_right = 400.0
+offset_bottom = 375.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_u41is")
+
+[node name="Label" type="Label" parent="MenuButton_allg1/Panel"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 25.0
+offset_right = 220.0
+offset_bottom = 125.0
+theme = ExtResource("4_pfrnu")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wvfk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="MenuButton_allg1/Panel/Label"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 100.0
+offset_bottom = 105.0
+theme = ExtResource("4_pfrnu")
+theme_override_font_sizes/font_size = 60
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Links" type="Label" parent="MenuButton_allg1/Panel"]
+layout_mode = 0
+offset_top = 138.0
+offset_right = 170.0
+offset_bottom = 275.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wcngf")
+
+[node name="Kugel1" type="TextureRect" parent="MenuButton_allg1/Panel/Links"]
+layout_mode = 0
+offset_left = 6.66667
+offset_top = 85.3334
+offset_right = 56.6667
+offset_bottom = 135.333
+texture = ExtResource("5_23oxn")
+expand_mode = 1
+
+[node name="Kugel2" type="TextureRect" parent="MenuButton_allg1/Panel/Links"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 85.3334
+offset_right = 110.0
+offset_bottom = 135.333
+texture = ExtResource("5_23oxn")
+expand_mode = 1
+
+[node name="Kugel3" type="TextureRect" parent="MenuButton_allg1/Panel/Links"]
+layout_mode = 0
+offset_left = 113.333
+offset_top = 85.3334
+offset_right = 163.333
+offset_bottom = 135.333
+texture = ExtResource("5_23oxn")
+expand_mode = 1
+
+[node name="Rechts" type="Label" parent="MenuButton_allg1/Panel"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 138.0
+offset_right = 340.0
+offset_bottom = 275.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_rpe77")
+
+[node name="MenuButton_allg2" parent="." instance=ExtResource("2_pd5ue")]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 350.0
+offset_right = 987.0
+offset_bottom = 924.0
+scale = Vector2(0.6, 0.6)
+link = ExtResource("6_wx1cj")
+sterne = 2
+
+[node name="Panel" type="Panel" parent="MenuButton_allg2"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 100.0
+offset_right = 400.0
+offset_bottom = 375.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5ltr1")
+
+[node name="Label" type="Label" parent="MenuButton_allg2/Panel"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 25.0
+offset_right = 220.0
+offset_bottom = 125.0
+theme = ExtResource("4_pfrnu")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_ndbtq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="MenuButton_allg2/Panel/Label"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 100.0
+offset_bottom = 105.0
+theme = ExtResource("4_pfrnu")
+theme_override_font_sizes/font_size = 60
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Links" type="Label" parent="MenuButton_allg2/Panel"]
+layout_mode = 0
+offset_top = 138.0
+offset_right = 170.0
+offset_bottom = 275.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_fvytq")
+
+[node name="Label" type="Label" parent="MenuButton_allg2/Panel/Links"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 35.0
+offset_right = 105.0
+offset_bottom = 108.0
+theme = ExtResource("4_pfrnu")
+theme_override_font_sizes/font_size = 60
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rechts" type="Label" parent="MenuButton_allg2/Panel"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 138.0
+offset_right = 340.0
+offset_bottom = 275.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_tpcg5")
+
+[node name="MenuButton_allg3" parent="." instance=ExtResource("2_pd5ue")]
+layout_mode = 0
+offset_left = 853.0
+offset_top = 350.0
+offset_right = 1313.0
+offset_bottom = 924.0
+scale = Vector2(0.6, 0.6)
+link = ExtResource("7_2pw0u")
+sterne = 3
+
+[node name="Panel" type="Panel" parent="MenuButton_allg3"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 230.0
+offset_right = 400.0
+offset_bottom = 375.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3im3t")
+
+[node name="Polygon2D" type="Polygon2D" parent="MenuButton_allg3/Panel"]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 340, 0, 170, -125)
+
+[node name="Label" type="Label" parent="MenuButton_allg3/Panel/Polygon2D"]
+offset_top = -97.0
+offset_right = 340.0
+theme = ExtResource("4_pfrnu")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 70
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R1_links" type="Label" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 135.0
+offset_bottom = 125.0
+theme = ExtResource("4_pfrnu")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_i078a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="MenuButton_allg3/Panel/R1_links"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 100.0
+offset_bottom = 105.0
+theme = ExtResource("4_pfrnu")
+theme_override_font_sizes/font_size = 60
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R1_Plus" type="Label" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 30.0
+offset_right = 220.0
+offset_bottom = 130.0
+theme = ExtResource("4_pfrnu")
+theme_override_font_sizes/font_size = 60
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R1_rechts" type="Label" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 25.0
+offset_right = 305.0
+offset_bottom = 125.0
+theme = ExtResource("4_pfrnu")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_i078a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R2_links" type="Label" parent="MenuButton_allg3/Panel"]
+visible = false
+layout_mode = 0
+offset_left = 35.0
+offset_top = 150.0
+offset_right = 135.0
+offset_bottom = 250.0
+theme = ExtResource("4_pfrnu")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_i078a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R2_Plus" type="Label" parent="MenuButton_allg3/Panel"]
+visible = false
+layout_mode = 0
+offset_left = 120.0
+offset_top = 155.0
+offset_right = 220.0
+offset_bottom = 255.0
+theme = ExtResource("4_pfrnu")
+theme_override_font_sizes/font_size = 60
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R2_rechts" type="Label" parent="MenuButton_allg3/Panel"]
+visible = false
+layout_mode = 0
+offset_left = 205.0
+offset_top = 150.0
+offset_right = 305.0
+offset_bottom = 250.0
+theme = ExtResource("4_pfrnu")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_i078a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="MenuButton_allg3/Panel/R2_rechts"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 100.0
+offset_bottom = 105.0
+theme = ExtResource("4_pfrnu")
+theme_override_font_sizes/font_size = 60
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1

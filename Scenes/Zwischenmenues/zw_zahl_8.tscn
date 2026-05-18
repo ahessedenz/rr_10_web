@@ -1,0 +1,107 @@
+[gd_scene load_steps=9 format=3 uid="uid://dpct7d2md51p5"]
+
+[ext_resource type="PackedScene" uid="uid://djg36nrbf8nu8" path="res://Scenes/Zwischenmenues/zwischenmenue.tscn" id="1_cantd"]
+[ext_resource type="Texture2D" uid="uid://ccnj5o3shlwo0" path="res://Assets/bg/Rakete_cut.png" id="2_5wmgo"]
+[ext_resource type="PackedScene" uid="uid://c6p14qk30x4gf" path="res://Scenes/menu_button_allg.tscn" id="2_bn3rf"]
+[ext_resource type="PackedScene" uid="uid://cl1b4wfs314x6" path="res://Scenes/Popups/popup_zerlegen_der_8.tscn" id="3_ags86"]
+[ext_resource type="Texture2D" uid="uid://kp7e3udl1fwh" path="res://Assets/bg/Sternenmann2.png" id="3_ufw4y"]
+[ext_resource type="PackedScene" uid="uid://b28tti8048yjx" path="res://Scenes/Popups/popup_addieren_subtrahieren_8.tscn" id="4_aksir"]
+[ext_resource type="Texture2D" uid="uid://muw8ljfe0nma" path="res://Assets/bg/Sternchen.png" id="4_p7g8y"]
+[ext_resource type="PackedScene" uid="uid://6hwbj733rav4" path="res://Scenes/Popups/popup_rechenmauern_8.tscn" id="5_hy5ht"]
+
+[node name="zw_Zahl_8" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Zwischenmenue" parent="." instance=ExtResource("1_cantd")]
+layout_mode = 1
+titel = "Die Zahl 8"
+
+[node name="DesignGrafiken" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Rakete" type="TextureRect" parent="DesignGrafiken"]
+offset_left = 1700.0
+offset_top = 1194.0
+offset_right = 1930.0
+offset_bottom = 1494.0
+texture = ExtResource("2_5wmgo")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="Sternenmann" type="TextureRect" parent="DesignGrafiken"]
+offset_left = 1600.0
+offset_top = 175.0
+offset_right = 1875.0
+offset_bottom = 450.0
+texture = ExtResource("3_ufw4y")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="Sternchen1" type="TextureRect" parent="DesignGrafiken"]
+offset_left = 400.0
+offset_top = 1250.0
+offset_right = 470.0
+offset_bottom = 1320.0
+texture = ExtResource("4_p7g8y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sternchen2" type="TextureRect" parent="DesignGrafiken"]
+offset_left = 1800.0
+offset_top = 800.0
+offset_right = 1850.0
+offset_bottom = 850.0
+texture = ExtResource("4_p7g8y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MenuButton_allg1" parent="." instance=ExtResource("2_bn3rf")]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 550.0
+offset_right = 744.0
+offset_bottom = 1124.0
+string = "Zerlegen|der 8"
+seitenzahlen = "S. 44"
+link = ExtResource("3_ags86")
+
+[node name="MenuButton_allg2" parent="." instance=ExtResource("2_bn3rf")]
+layout_mode = 0
+offset_left = 794.0
+offset_top = 550.0
+offset_right = 1254.0
+offset_bottom = 1124.0
+string = "Addieren|und|Subtrahieren|bis 8"
+seitenzahlen = "S. 45"
+link = ExtResource("4_aksir")
+
+[node name="MenuButton_allg3" parent="." instance=ExtResource("2_bn3rf")]
+layout_mode = 0
+offset_left = 1304.0
+offset_top = 550.0
+offset_right = 1764.0
+offset_bottom = 1124.0
+string = "Rechnen|mit|Mauern"
+seitenzahlen = "S. 45"
+link = ExtResource("5_hy5ht")
+
+[node name="MenuButton_allg4" parent="." instance=ExtResource("2_bn3rf")]
+visible = false
+layout_mode = 0
+offset_left = 1529.0
+offset_top = 550.0
+offset_right = 1989.0
+offset_bottom = 1124.0
+string = "Rechnen|mit Mauern|bis 8"
+seitenzahlen = "S. 45"
+inactive = true

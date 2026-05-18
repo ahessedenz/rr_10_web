@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=3 uid="uid://duhx0ltyg0bjx"]
+
+[ext_resource type="PackedScene" uid="uid://djg36nrbf8nu8" path="res://Scenes/Zwischenmenues/zwischenmenue.tscn" id="1_es2n6"]
+[ext_resource type="Texture2D" uid="uid://ccnj5o3shlwo0" path="res://Assets/bg/Rakete_cut.png" id="2_6gk1j"]
+[ext_resource type="PackedScene" uid="uid://c6p14qk30x4gf" path="res://Scenes/menu_button_allg.tscn" id="2_xtu3o"]
+[ext_resource type="PackedScene" uid="uid://b0jetp4uhmtc7" path="res://Scenes/Tasks/Legeseiten/legeseite.tscn" id="3_cydii"]
+[ext_resource type="Texture2D" uid="uid://nvop5q44dvpl" path="res://Assets/bg/Ufo2.png" id="3_v4vr8"]
+[ext_resource type="Texture2D" uid="uid://y4n8tekfiydp" path="res://Assets/bg/4Arm.png" id="4_efhfg"]
+[ext_resource type="PackedScene" uid="uid://du123a8hr20aq" path="res://Scenes/Tasks/Legeseiten/legeseite_6.tscn" id="4_l2x1c"]
+[ext_resource type="Texture2D" uid="uid://muw8ljfe0nma" path="res://Assets/bg/Sternchen.png" id="5_f8ams"]
+
+[node name="zw_Legeseiten" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Zwischenmenue" parent="." instance=ExtResource("1_es2n6")]
+layout_mode = 1
+titel = "Legeseiten"
+
+[node name="DesignGrafiken" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Rakete" type="TextureRect" parent="DesignGrafiken"]
+layout_mode = 0
+offset_left = 1700.0
+offset_top = 1194.0
+offset_right = 1930.0
+offset_bottom = 1494.0
+texture = ExtResource("2_6gk1j")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="Ufo" type="TextureRect" parent="DesignGrafiken"]
+layout_mode = 0
+offset_left = 1600.0
+offset_top = 175.0
+offset_right = 1875.0
+offset_bottom = 450.0
+texture = ExtResource("3_v4vr8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="4Arm" type="TextureRect" parent="DesignGrafiken"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 250.0
+offset_right = 475.0
+offset_bottom = 525.0
+texture = ExtResource("4_efhfg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sternchen1" type="TextureRect" parent="DesignGrafiken"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 1250.0
+offset_right = 470.0
+offset_bottom = 1320.0
+texture = ExtResource("5_f8ams")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sternchen2" type="TextureRect" parent="DesignGrafiken"]
+layout_mode = 0
+offset_left = 1800.0
+offset_top = 800.0
+offset_right = 1850.0
+offset_bottom = 850.0
+texture = ExtResource("5_f8ams")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MenuButton_allg1" parent="." instance=ExtResource("2_xtu3o")]
+layout_mode = 0
+offset_left = 539.0
+offset_top = 550.0
+offset_right = 999.0
+offset_bottom = 1124.0
+string = "Legeseiten|0 bis 5"
+seitenzahlen = "S. 1"
+link = ExtResource("3_cydii")
+
+[node name="MenuButton_allg2" parent="." instance=ExtResource("2_xtu3o")]
+layout_mode = 0
+offset_left = 1049.0
+offset_top = 550.0
+offset_right = 1509.0
+offset_bottom = 1124.0
+string = "Legeseiten|6 bis 10"
+seitenzahlen = "S. 64"
+link = ExtResource("4_l2x1c")

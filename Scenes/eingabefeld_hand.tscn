@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=3 uid="uid://ciq5qqy8rtojp"]
+
+[ext_resource type="Script" path="res://Scripts/eingabefeld_hand.gd" id="1_upmg2"]
+[ext_resource type="Texture2D" uid="uid://ox3nf3bb1g7a" path="res://Assets/Handspiel/Hand_offen_rechts.png" id="2_bo2x4"]
+[ext_resource type="Texture2D" uid="uid://bsafagyoklhtl" path="res://Assets/Handspiel/Kugel.png" id="3_6nv7n"]
+[ext_resource type="AudioStream" uid="uid://buvudypvkad8w" path="res://Assets/sounds/LQ_Correct_Answer_03.wav" id="3_xjxip"]
+[ext_resource type="AudioStream" uid="uid://dk43x8yrive2i" path="res://Assets/sounds/LQ_Wrong_Answer_02.wav" id="4_3kmc0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27ee2"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gtait"]
+size = Vector2(250, 250)
+
+[node name="Eingabefeld_Hand" type="Label" groups=["Eingabefeld"]]
+offset_right = 250.0
+offset_bottom = 250.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_27ee2")
+script = ExtResource("1_upmg2")
+
+[node name="Hand" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 250.0
+offset_bottom = 250.0
+texture = ExtResource("2_bo2x4")
+expand_mode = 1
+
+[node name="Kugel1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 146.0
+offset_right = 97.0
+offset_bottom = 181.0
+texture = ExtResource("3_6nv7n")
+expand_mode = 1
+
+[node name="Kugel2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 127.0
+offset_right = 156.0
+offset_bottom = 162.0
+texture = ExtResource("3_6nv7n")
+expand_mode = 1
+
+[node name="Kugel3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 211.0
+offset_right = 117.0
+offset_bottom = 246.0
+texture = ExtResource("3_6nv7n")
+expand_mode = 1
+
+[node name="Kugel4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 180.0
+offset_right = 170.0
+offset_bottom = 215.0
+texture = ExtResource("3_6nv7n")
+expand_mode = 1
+
+[node name="Kugel5" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 170.0
+offset_right = 132.0
+offset_bottom = 205.0
+texture = ExtResource("3_6nv7n")
+expand_mode = 1
+
+[node name="ResetTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Richtig" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xjxip")
+
+[node name="Falsch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_3kmc0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(125, 125)
+shape = SubResource("RectangleShape2D_gtait")
+
+[connection signal="timeout" from="ResetTimer" to="." method="_on_reset_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

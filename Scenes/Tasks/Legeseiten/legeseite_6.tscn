@@ -1,0 +1,560 @@
+[gd_scene load_steps=11 format=3 uid="uid://du123a8hr20aq"]
+
+[ext_resource type="Script" path="res://Scripts/legeseite_6.gd" id="1_0ms5y"]
+[ext_resource type="PackedScene" uid="uid://3fdma24dkgqp" path="res://Scenes/aufgaben_grundgeruest.tscn" id="1_gl20c"]
+[ext_resource type="Texture2D" uid="uid://muw8ljfe0nma" path="res://Assets/bg/Sternchen.png" id="2_ppy48"]
+[ext_resource type="Texture2D" uid="uid://cddg0ssq8ypa7" path="res://Assets/Mengen/Mengenkreis.png" id="3_jh33m"]
+[ext_resource type="Texture2D" uid="uid://cv5fgwiwibfat" path="res://Assets/Mengen/Kreis.png" id="4_glp8v"]
+[ext_resource type="PackedScene" uid="uid://658l6m1hi0a0" path="res://Scenes/eingabefeld.tscn" id="6_16r4g"]
+[ext_resource type="PackedScene" uid="uid://c0d6xccdnn3oe" path="res://Scenes/eingabefeld_breit.tscn" id="6_yd1uf"]
+[ext_resource type="PackedScene" uid="uid://8lreot62cdu5" path="res://Scenes/rechenschiff_doppelt.tscn" id="7_wtlp0"]
+[ext_resource type="PackedScene" uid="uid://bgi8fbsgslujc" path="res://Scenes/rakete_doppelt.tscn" id="8_rnr6r"]
+[ext_resource type="PackedScene" uid="uid://c46wubbelkgn6" path="res://Scenes/zahl_button_breit.tscn" id="10_vqywi"]
+
+[node name="legeseite6" type="Node2D"]
+script = ExtResource("1_0ms5y")
+
+[node name="AufgabenGrundgeruest" parent="." instance=ExtResource("1_gl20c")]
+
+[node name="Hintergrundbilder" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sternchen1" type="TextureRect" parent="Hintergrundbilder"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 347.0
+offset_right = 618.0
+offset_bottom = 732.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_ppy48")
+stretch_mode = 5
+
+[node name="Sternchen2" type="TextureRect" parent="Hintergrundbilder"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 745.0
+offset_right = 740.0
+offset_bottom = 1130.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_ppy48")
+stretch_mode = 5
+
+[node name="Sternchen3" type="TextureRect" parent="Hintergrundbilder"]
+layout_mode = 0
+offset_left = 1541.0
+offset_top = 1041.0
+offset_right = 2009.0
+offset_bottom = 1426.0
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_ppy48")
+stretch_mode = 5
+
+[node name="Mengenkreis" type="TextureRect" parent="."]
+offset_left = 524.0
+offset_top = 500.0
+offset_right = 1524.0
+offset_bottom = 1000.0
+texture = ExtResource("3_jh33m")
+expand_mode = 1
+
+[node name="Menge6" type="Control" parent="Mengenkreis"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect1" type="TextureRect" parent="Mengenkreis/Menge6"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 139.0
+offset_right = 429.0
+offset_bottom = 476.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect2" type="TextureRect" parent="Mengenkreis/Menge6"]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 298.0
+offset_right = 539.0
+offset_bottom = 635.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect3" type="TextureRect" parent="Mengenkreis/Menge6"]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 176.0
+offset_right = 782.0
+offset_bottom = 513.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect4" type="TextureRect" parent="Mengenkreis/Menge6"]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 28.0
+offset_right = 890.0
+offset_bottom = 365.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect5" type="TextureRect" parent="Mengenkreis/Menge6"]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 91.0
+offset_right = 1057.0
+offset_bottom = 428.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect6" type="TextureRect" parent="Mengenkreis/Menge6"]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 312.0
+offset_right = 937.0
+offset_bottom = 649.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="Menge7" type="Control" parent="Mengenkreis"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect1" type="TextureRect" parent="Mengenkreis/Menge7"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 139.0
+offset_right = 429.0
+offset_bottom = 476.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect2" type="TextureRect" parent="Mengenkreis/Menge7"]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 298.0
+offset_right = 539.0
+offset_bottom = 635.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect3" type="TextureRect" parent="Mengenkreis/Menge7"]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 176.0
+offset_right = 782.0
+offset_bottom = 513.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect4" type="TextureRect" parent="Mengenkreis/Menge7"]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 28.0
+offset_right = 890.0
+offset_bottom = 365.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect5" type="TextureRect" parent="Mengenkreis/Menge7"]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 91.0
+offset_right = 1057.0
+offset_bottom = 428.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect6" type="TextureRect" parent="Mengenkreis/Menge7"]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 312.0
+offset_right = 937.0
+offset_bottom = 649.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect7" type="TextureRect" parent="Mengenkreis/Menge7"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 147.0
+offset_right = 596.0
+offset_bottom = 484.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="Menge8" type="Control" parent="Mengenkreis"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect1" type="TextureRect" parent="Mengenkreis/Menge8"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 139.0
+offset_right = 429.0
+offset_bottom = 476.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect2" type="TextureRect" parent="Mengenkreis/Menge8"]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 298.0
+offset_right = 539.0
+offset_bottom = 635.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect3" type="TextureRect" parent="Mengenkreis/Menge8"]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 176.0
+offset_right = 782.0
+offset_bottom = 513.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect4" type="TextureRect" parent="Mengenkreis/Menge8"]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 28.0
+offset_right = 890.0
+offset_bottom = 365.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect5" type="TextureRect" parent="Mengenkreis/Menge8"]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 91.0
+offset_right = 1057.0
+offset_bottom = 428.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect6" type="TextureRect" parent="Mengenkreis/Menge8"]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 312.0
+offset_right = 937.0
+offset_bottom = 649.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect7" type="TextureRect" parent="Mengenkreis/Menge8"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 147.0
+offset_right = 596.0
+offset_bottom = 484.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect8" type="TextureRect" parent="Mengenkreis/Menge8"]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 12.0
+offset_right = 733.0
+offset_bottom = 349.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="Menge9" type="Control" parent="Mengenkreis"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect1" type="TextureRect" parent="Mengenkreis/Menge9"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 139.0
+offset_right = 429.0
+offset_bottom = 476.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect2" type="TextureRect" parent="Mengenkreis/Menge9"]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 298.0
+offset_right = 539.0
+offset_bottom = 635.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect3" type="TextureRect" parent="Mengenkreis/Menge9"]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 176.0
+offset_right = 782.0
+offset_bottom = 513.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect4" type="TextureRect" parent="Mengenkreis/Menge9"]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 28.0
+offset_right = 890.0
+offset_bottom = 365.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect5" type="TextureRect" parent="Mengenkreis/Menge9"]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 91.0
+offset_right = 1057.0
+offset_bottom = 428.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect6" type="TextureRect" parent="Mengenkreis/Menge9"]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 312.0
+offset_right = 937.0
+offset_bottom = 649.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect7" type="TextureRect" parent="Mengenkreis/Menge9"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 147.0
+offset_right = 596.0
+offset_bottom = 484.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect8" type="TextureRect" parent="Mengenkreis/Menge9"]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 12.0
+offset_right = 733.0
+offset_bottom = 349.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect9" type="TextureRect" parent="Mengenkreis/Menge9"]
+layout_mode = 0
+offset_left = 767.0
+offset_top = 246.0
+offset_right = 1104.0
+offset_bottom = 583.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="Menge10" type="Control" parent="Mengenkreis"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect1" type="TextureRect" parent="Mengenkreis/Menge10"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 139.0
+offset_right = 429.0
+offset_bottom = 476.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect2" type="TextureRect" parent="Mengenkreis/Menge10"]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 298.0
+offset_right = 539.0
+offset_bottom = 635.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect3" type="TextureRect" parent="Mengenkreis/Menge10"]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 176.0
+offset_right = 782.0
+offset_bottom = 513.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect4" type="TextureRect" parent="Mengenkreis/Menge10"]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 28.0
+offset_right = 890.0
+offset_bottom = 365.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect5" type="TextureRect" parent="Mengenkreis/Menge10"]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 91.0
+offset_right = 1057.0
+offset_bottom = 428.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect6" type="TextureRect" parent="Mengenkreis/Menge10"]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 312.0
+offset_right = 937.0
+offset_bottom = 649.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect7" type="TextureRect" parent="Mengenkreis/Menge10"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 147.0
+offset_right = 596.0
+offset_bottom = 484.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect8" type="TextureRect" parent="Mengenkreis/Menge10"]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 12.0
+offset_right = 733.0
+offset_bottom = 349.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect9" type="TextureRect" parent="Mengenkreis/Menge10"]
+layout_mode = 0
+offset_left = 767.0
+offset_top = 246.0
+offset_right = 1104.0
+offset_bottom = 583.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="TextureRect10" type="TextureRect" parent="Mengenkreis/Menge10"]
+layout_mode = 0
+offset_left = 364.0
+offset_top = 331.0
+offset_right = 701.0
+offset_bottom = 668.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_glp8v")
+
+[node name="Aufgabe" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EingabefeldZahl" parent="Aufgabe" node_paths=PackedStringArray("next") instance=ExtResource("6_16r4g")]
+layout_mode = 0
+offset_left = 899.0
+offset_top = 150.0
+offset_right = 1149.0
+offset_bottom = 400.0
+next = NodePath("../EingabefeldBreitStrichliste")
+
+[node name="Line2D" type="Line2D" parent="Aufgabe/EingabefeldZahl"]
+position = Vector2(100, 0)
+points = PackedVector2Array(25, 350, 25, 249)
+width = 5.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="EingabefeldBreitStrichliste" parent="Aufgabe" node_paths=PackedStringArray("next") instance=ExtResource("6_yd1uf")]
+layout_mode = 0
+offset_left = 349.0
+offset_top = 150.0
+offset_right = 799.0
+offset_bottom = 400.0
+next = NodePath("../EingabefeldBreitWuerfel")
+strichliste = true
+
+[node name="EingabefeldBreitWuerfel" parent="Aufgabe" node_paths=PackedStringArray("next") instance=ExtResource("6_yd1uf")]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 950.0
+offset_right = 600.0
+offset_bottom = 1200.0
+next = NodePath("../RechenschiffDoppelt")
+wuerfel = true
+
+[node name="RechenschiffDoppelt" parent="Aufgabe" node_paths=PackedStringArray("next") instance=ExtResource("7_wtlp0")]
+layout_mode = 0
+offset_left = 850.0
+offset_top = 1040.0
+offset_right = 2856.0
+offset_bottom = 1888.0
+scale = Vector2(0.25, 0.25)
+next = NodePath("../RaketeDoppelt")
+
+[node name="RaketeDoppelt" parent="Aufgabe" node_paths=PackedStringArray("next") instance=ExtResource("8_rnr6r")]
+layout_mode = 0
+offset_left = 1750.0
+offset_top = 138.0
+offset_right = 1910.0
+offset_bottom = 1278.0
+next = NodePath("../EingabefeldBreitHand")
+
+[node name="EingabefeldBreitHand" parent="Aufgabe" instance=ExtResource("6_yd1uf")]
+layout_mode = 0
+offset_left = 1249.0
+offset_top = 150.0
+offset_right = 1699.0
+offset_bottom = 400.0
+hand = true
+
+[node name="Zahlbuttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ZahlButtonBreit6" parent="Zahlbuttons" instance=ExtResource("10_vqywi")]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 1300.0
+offset_right = 569.0
+offset_bottom = 1460.0
+index = "6"
+
+[node name="ZahlButtonBreit7" parent="Zahlbuttons" instance=ExtResource("10_vqywi")]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 1300.0
+offset_right = 869.0
+offset_bottom = 1460.0
+index = "7"
+
+[node name="ZahlButtonBreit8" parent="Zahlbuttons" instance=ExtResource("10_vqywi")]
+layout_mode = 0
+offset_left = 879.0
+offset_top = 1300.0
+offset_right = 1169.0
+offset_bottom = 1460.0
+index = "8"
+
+[node name="ZahlButtonBreit9" parent="Zahlbuttons" instance=ExtResource("10_vqywi")]
+layout_mode = 0
+offset_left = 1179.0
+offset_top = 1300.0
+offset_right = 1469.0
+offset_bottom = 1460.0
+index = "9"
+
+[node name="ZahlButtonBreit10" parent="Zahlbuttons" instance=ExtResource("10_vqywi")]
+layout_mode = 0
+offset_left = 1479.0
+offset_top = 1300.0
+offset_right = 1769.0
+offset_bottom = 1460.0
+index = "10"

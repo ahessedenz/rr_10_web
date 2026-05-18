@@ -1,0 +1,156 @@
+[gd_scene load_steps=8 format=3 uid="uid://bgi8fbsgslujc"]
+
+[ext_resource type="PackedScene" uid="uid://blwo64m4e46js" path="res://Scenes/raketenquadrat.tscn" id="1_4hcoa"]
+[ext_resource type="Script" path="res://Scripts/rakete_doppelt.gd" id="1_itoyu"]
+[ext_resource type="AudioStream" uid="uid://buvudypvkad8w" path="res://Assets/sounds/LQ_Correct_Answer_03.wav" id="2_yo1hh"]
+[ext_resource type="AudioStream" uid="uid://dk43x8yrive2i" path="res://Assets/sounds/LQ_Wrong_Answer_02.wav" id="3_h0yn2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5gbx"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qiamp"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 5
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e141k"]
+size = Vector2(138, 1120)
+
+[node name="RaketeDoppelt" type="Label" groups=["Eingabefeld"]]
+offset_right = 160.0
+offset_bottom = 1140.0
+mouse_filter = 0
+script = ExtResource("1_itoyu")
+
+[node name="Spitze" type="Polygon2D" parent="."]
+position = Vector2(10, 0)
+color = Color(0.980392, 0.196078, 0.196078, 1)
+polygon = PackedVector2Array(70, 11, 140, 100, 0, 100)
+
+[node name="Spitze_Outline" type="Line2D" parent="."]
+position = Vector2(10, 0)
+points = PackedVector2Array(70, 11, 140, 100, 0, 100, 70, 11)
+width = 2.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Raketenquadrat10" parent="." instance=ExtResource("1_4hcoa")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 100.0
+offset_right = 130.0
+offset_bottom = 200.0
+
+[node name="Raketenquadrat9" parent="." instance=ExtResource("1_4hcoa")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 200.0
+offset_right = 130.0
+offset_bottom = 300.0
+
+[node name="Raketenquadrat8" parent="." instance=ExtResource("1_4hcoa")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 300.0
+offset_right = 130.0
+offset_bottom = 400.0
+
+[node name="Raketenquadrat7" parent="." instance=ExtResource("1_4hcoa")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 400.0
+offset_right = 130.0
+offset_bottom = 500.0
+
+[node name="Raketenquadrat6" parent="." instance=ExtResource("1_4hcoa")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 500.0
+offset_right = 130.0
+offset_bottom = 600.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_s5gbx")
+
+[node name="Raketenquadrat5" parent="." instance=ExtResource("1_4hcoa")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 600.0
+offset_right = 130.0
+offset_bottom = 700.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qiamp")
+
+[node name="Raketenquadrat4" parent="." instance=ExtResource("1_4hcoa")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 700.0
+offset_right = 130.0
+offset_bottom = 800.0
+
+[node name="Raketenquadrat3" parent="." instance=ExtResource("1_4hcoa")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 800.0
+offset_right = 130.0
+offset_bottom = 900.0
+
+[node name="Raketenquadrat2" parent="." instance=ExtResource("1_4hcoa")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 900.0
+offset_right = 130.0
+offset_bottom = 1000.0
+
+[node name="Raketenquadrat1" parent="." instance=ExtResource("1_4hcoa")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 1000.0
+offset_right = 130.0
+offset_bottom = 1100.0
+
+[node name="Duese_links" type="Polygon2D" parent="."]
+position = Vector2(10, 500)
+color = Color(0.980392, 0.196078, 0.196078, 1)
+polygon = PackedVector2Array(30, 600, 56, 600, 66, 625, 20, 625)
+
+[node name="Duese_rechts" type="Polygon2D" parent="."]
+position = Vector2(64, 500)
+color = Color(0.980392, 0.196078, 0.196078, 1)
+polygon = PackedVector2Array(30, 600, 56, 600, 66, 625, 20, 625)
+
+[node name="Duese_links_Outline" type="Line2D" parent="."]
+position = Vector2(10, 500)
+points = PackedVector2Array(30, 600, 56, 600, 66, 625, 20, 625, 30, 600)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Duese_rechts_Outline" type="Line2D" parent="."]
+position = Vector2(64, 500)
+points = PackedVector2Array(30, 600, 56, 600, 66, 625, 20, 625, 30, 600)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="ResetTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Richtig" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_yo1hh")
+
+[node name="Falsch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_h0yn2")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(80, 572)
+shape = SubResource("RectangleShape2D_e141k")
+
+[connection signal="timeout" from="ResetTimer" to="." method="_on_reset_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

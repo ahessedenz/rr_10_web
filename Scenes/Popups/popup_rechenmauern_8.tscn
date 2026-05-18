@@ -1,0 +1,386 @@
+[gd_scene load_steps=9 format=3 uid="uid://6hwbj733rav4"]
+
+[ext_resource type="PackedScene" uid="uid://c25sapn44hngq" path="res://Scenes/Popups/popup_hintergrund.tscn" id="1_jmykc"]
+[ext_resource type="PackedScene" uid="uid://c6p14qk30x4gf" path="res://Scenes/menu_button_allg.tscn" id="2_ldoyl"]
+[ext_resource type="PackedScene" uid="uid://djev5at3mtmf" path="res://Scenes/Tasks/Rechnen_mit_Mauern_bis_8/rechnen_mit_mauern_bis_8_1.tscn" id="3_vl0lq"]
+[ext_resource type="Texture2D" uid="uid://dcl2pcf53675i" path="res://Assets/Zahlenmauer/Zahlenmauer_Klotz_freigestellt.png" id="4_so24m"]
+[ext_resource type="Theme" uid="uid://pvywg5bjxo2y" path="res://Theme/label.tres" id="5_4xmyt"]
+[ext_resource type="PackedScene" uid="uid://tl73acythan7" path="res://Scenes/Tasks/Rechnen_mit_Mauern_bis_8/rechnen_mit_mauern_bis_8_2.tscn" id="6_c1w5y"]
+[ext_resource type="PackedScene" uid="uid://dd074njooyo8i" path="res://Scenes/Tasks/Rechnen_mit_Mauern_bis_8/rechnen_mit_mauern_bis_8_3.tscn" id="7_pteu8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_daeim"]
+bg_color = Color(0.690196, 0.87451, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="Popup_Rechenmauern8" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Popup_Hintergrund" parent="." instance=ExtResource("1_jmykc")]
+layout_mode = 1
+titel = "Rechnen mit Mauern bis 8"
+
+[node name="MenuButton_allg1" parent="." instance=ExtResource("2_ldoyl")]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 350.0
+offset_right = 661.0
+offset_bottom = 924.0
+scale = Vector2(0.6, 0.6)
+link = ExtResource("3_vl0lq")
+sterne = 1
+
+[node name="Panel" type="Panel" parent="MenuButton_allg1"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 100.0
+offset_right = 430.0
+offset_bottom = 400.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_daeim")
+
+[node name="Schatten" type="ColorRect" parent="MenuButton_allg1/Panel"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 300.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.392157)
+
+[node name="Klotz1" type="TextureRect" parent="MenuButton_allg1/Panel"]
+layout_mode = 0
+offset_left = 96.6667
+offset_top = 204.667
+offset_right = 296.667
+offset_bottom = 348.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="Label" type="Label" parent="MenuButton_allg1/Panel/Klotz1"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 44.0
+offset_right = 142.0
+offset_bottom = 147.0
+theme = ExtResource("5_4xmyt")
+theme_override_font_sizes/font_size = 80
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Klotz2" type="TextureRect" parent="MenuButton_allg1/Panel"]
+layout_mode = 0
+offset_left = 184.667
+offset_top = 204.667
+offset_right = 384.667
+offset_bottom = 348.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="Label" type="Label" parent="MenuButton_allg1/Panel/Klotz2"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 44.0
+offset_right = 142.0
+offset_bottom = 147.0
+theme = ExtResource("5_4xmyt")
+theme_override_font_sizes/font_size = 80
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Klotz5" type="TextureRect" parent="MenuButton_allg1/Panel"]
+layout_mode = 0
+offset_left = 141.333
+offset_top = 139.667
+offset_right = 341.333
+offset_bottom = 283.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="MenuButton_allg2" parent="." instance=ExtResource("2_ldoyl")]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 350.0
+offset_right = 987.0
+offset_bottom = 924.0
+scale = Vector2(0.6, 0.6)
+link = ExtResource("6_c1w5y")
+sterne = 2
+
+[node name="Panel" type="Panel" parent="MenuButton_allg2"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 100.0
+offset_right = 430.0
+offset_bottom = 400.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_daeim")
+
+[node name="Schatten" type="ColorRect" parent="MenuButton_allg2/Panel"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 300.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.392157)
+
+[node name="Klotz1" type="TextureRect" parent="MenuButton_allg2/Panel"]
+layout_mode = 0
+offset_left = 53.3334
+offset_top = 204.667
+offset_right = 253.333
+offset_bottom = 348.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="Label" type="Label" parent="MenuButton_allg2/Panel/Klotz1"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 44.0
+offset_right = 142.0
+offset_bottom = 147.0
+theme = ExtResource("5_4xmyt")
+theme_override_font_sizes/font_size = 80
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Klotz2" type="TextureRect" parent="MenuButton_allg2/Panel"]
+layout_mode = 0
+offset_left = 141.333
+offset_top = 204.667
+offset_right = 341.333
+offset_bottom = 348.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="Label" type="Label" parent="MenuButton_allg2/Panel/Klotz2"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 44.0
+offset_right = 142.0
+offset_bottom = 147.0
+theme = ExtResource("5_4xmyt")
+theme_override_font_sizes/font_size = 80
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Klotz3" type="TextureRect" parent="MenuButton_allg2/Panel"]
+layout_mode = 0
+offset_left = 229.333
+offset_top = 204.667
+offset_right = 429.333
+offset_bottom = 348.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="Label" type="Label" parent="MenuButton_allg2/Panel/Klotz3"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 44.0
+offset_right = 142.0
+offset_bottom = 147.0
+theme = ExtResource("5_4xmyt")
+theme_override_font_sizes/font_size = 80
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Klotz5" type="TextureRect" parent="MenuButton_allg2/Panel"]
+layout_mode = 0
+offset_left = 98.0001
+offset_top = 139.667
+offset_right = 298.0
+offset_bottom = 283.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="Klotz6" type="TextureRect" parent="MenuButton_allg2/Panel"]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 139.667
+offset_right = 386.0
+offset_bottom = 283.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="Klotz8" type="TextureRect" parent="MenuButton_allg2/Panel"]
+layout_mode = 0
+offset_left = 144.333
+offset_top = 74.6666
+offset_right = 344.333
+offset_bottom = 218.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="MenuButton_allg3" parent="." instance=ExtResource("2_ldoyl")]
+layout_mode = 0
+offset_left = 853.0
+offset_top = 350.0
+offset_right = 1313.0
+offset_bottom = 924.0
+scale = Vector2(0.6, 0.6)
+link = ExtResource("7_pteu8")
+sterne = 3
+
+[node name="Panel" type="Panel" parent="MenuButton_allg3"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 100.0
+offset_right = 430.0
+offset_bottom = 400.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_daeim")
+
+[node name="Schatten" type="ColorRect" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 300.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.392157)
+
+[node name="Klotz1" type="TextureRect" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 8.33334
+offset_top = 204.667
+offset_right = 208.333
+offset_bottom = 348.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="Label" type="Label" parent="MenuButton_allg3/Panel/Klotz1"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 44.0
+offset_right = 142.0
+offset_bottom = 147.0
+theme = ExtResource("5_4xmyt")
+theme_override_font_sizes/font_size = 80
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Klotz2" type="TextureRect" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 96.3333
+offset_top = 204.667
+offset_right = 296.333
+offset_bottom = 348.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="Label" type="Label" parent="MenuButton_allg3/Panel/Klotz2"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 44.0
+offset_right = 142.0
+offset_bottom = 147.0
+theme = ExtResource("5_4xmyt")
+theme_override_font_sizes/font_size = 80
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Klotz3" type="TextureRect" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 184.333
+offset_top = 204.667
+offset_right = 384.333
+offset_bottom = 348.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="Label" type="Label" parent="MenuButton_allg3/Panel/Klotz3"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 44.0
+offset_right = 142.0
+offset_bottom = 147.0
+theme = ExtResource("5_4xmyt")
+theme_override_font_sizes/font_size = 80
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Klotz4" type="TextureRect" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 272.333
+offset_top = 204.667
+offset_right = 472.333
+offset_bottom = 348.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="Label" type="Label" parent="MenuButton_allg3/Panel/Klotz4"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 44.0
+offset_right = 142.0
+offset_bottom = 147.0
+theme = ExtResource("5_4xmyt")
+theme_override_font_sizes/font_size = 80
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Klotz5" type="TextureRect" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 139.667
+offset_right = 253.0
+offset_bottom = 283.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="Klotz6" type="TextureRect" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 139.667
+offset_right = 341.0
+offset_bottom = 283.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="Klotz7" type="TextureRect" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 139.667
+offset_right = 429.0
+offset_bottom = 283.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="Klotz8" type="TextureRect" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 99.3333
+offset_top = 74.6666
+offset_right = 299.333
+offset_bottom = 218.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="Klotz9" type="TextureRect" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 187.333
+offset_top = 74.6666
+offset_right = 387.333
+offset_bottom = 218.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")
+
+[node name="Klotz10" type="TextureRect" parent="MenuButton_allg3/Panel"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 9.6665
+offset_right = 344.0
+offset_bottom = 153.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_so24m")

@@ -1,0 +1,118 @@
+[gd_scene load_steps=9 format=3 uid="uid://dcko06tjw5ouh"]
+
+[ext_resource type="Script" path="res://Scripts/rechenschiff_anzeige.gd" id="1_0ahjj"]
+[ext_resource type="Script" path="res://Scripts/Kreis.gd" id="1_qw0kb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6x2bd"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2b6bk"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 170
+corner_radius_top_right = 170
+corner_radius_bottom_right = 170
+corner_radius_bottom_left = 170
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ecgjw"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 170
+corner_radius_top_right = 170
+corner_radius_bottom_right = 170
+corner_radius_bottom_left = 170
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_defg7"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 170
+corner_radius_top_right = 170
+corner_radius_bottom_right = 170
+corner_radius_bottom_left = 170
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqvfd"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 170
+corner_radius_top_right = 170
+corner_radius_bottom_right = 170
+corner_radius_bottom_left = 170
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knr45"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 170
+corner_radius_top_right = 170
+corner_radius_bottom_right = 170
+corner_radius_bottom_left = 170
+
+[node name="RechenschiffAnzeige" type="Label"]
+offset_right = 2006.0
+offset_bottom = 484.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_6x2bd")
+script = ExtResource("1_0ahjj")
+
+[node name="Kreis1" type="Label" parent="."]
+offset_left = 88.0
+offset_top = 71.0
+offset_right = 425.0
+offset_bottom = 408.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_2b6bk")
+script = ExtResource("1_qw0kb")
+
+[node name="Kreis2" type="Label" parent="."]
+offset_left = 457.0
+offset_top = 71.0
+offset_right = 794.0
+offset_bottom = 408.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ecgjw")
+script = ExtResource("1_qw0kb")
+
+[node name="Kreis3" type="Label" parent="."]
+offset_left = 825.0
+offset_top = 71.0
+offset_right = 1162.0
+offset_bottom = 408.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_defg7")
+script = ExtResource("1_qw0kb")
+
+[node name="Kreis4" type="Label" parent="."]
+offset_left = 1194.0
+offset_top = 71.0
+offset_right = 1531.0
+offset_bottom = 408.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_pqvfd")
+script = ExtResource("1_qw0kb")
+
+[node name="Kreis5" type="Label" parent="."]
+offset_left = 1563.0
+offset_top = 71.0
+offset_right = 1900.0
+offset_bottom = 408.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_knr45")
+script = ExtResource("1_qw0kb")

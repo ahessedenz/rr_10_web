@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://f1fjyyqrtfq8"]
+
+[ext_resource type="Texture2D" uid="uid://di3o4llsl7ecb" path="res://Assets/background/Rahmen.png" id="1_nr04w"]
+[ext_resource type="FontFile" uid="uid://cx2yb8j83mv5l" path="res://Assets/Fonts/Grundschrift-Bold.otf" id="2_3ubuv"]
+[ext_resource type="Script" path="res://Scripts/hintergrund.gd" id="2_wtts5"]
+[ext_resource type="PackedScene" uid="uid://bqjl0evaa0dd3" path="res://Scenes/sound_button.tscn" id="4_x2ssj"]
+
+[node name="Hintergrund" type="TextureRect"]
+offset_right = 2048.0
+offset_bottom = 1536.0
+texture = ExtResource("1_nr04w")
+expand_mode = 1
+script = ExtResource("2_wtts5")
+
+[node name="Farbe" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 44.0
+offset_right = 2010.0
+offset_bottom = 1494.0
+color = Color(0.690196, 0.87451, 1, 1)
+
+[node name="URL" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1660.0
+offset_top = 1502.0
+offset_right = 1960.0
+offset_bottom = 1548.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_3ubuv")
+theme_override_font_sizes/font_size = 30
+text = "www.Rechenrakete.de"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LinkMenuButton" type="Button" parent="URL"]
+layout_mode = 0
+offset_top = -7.0
+offset_right = 350.0
+offset_bottom = 34.0
+focus_mode = 0
+flat = true
+
+[node name="SoundButton" parent="." instance=ExtResource("4_x2ssj")]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 1372.0
+offset_right = 160.0
+offset_bottom = 1492.0
+
+[connection signal="pressed" from="URL/LinkMenuButton" to="." method="_on_link_menu_button_pressed"]

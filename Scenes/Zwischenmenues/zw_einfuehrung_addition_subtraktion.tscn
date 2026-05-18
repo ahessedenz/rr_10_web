@@ -1,0 +1,87 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1s5qjy1u83v5"]
+
+[ext_resource type="PackedScene" uid="uid://djg36nrbf8nu8" path="res://Scenes/Zwischenmenues/zwischenmenue.tscn" id="1_ns7vd"]
+[ext_resource type="PackedScene" uid="uid://c6p14qk30x4gf" path="res://Scenes/menu_button_allg.tscn" id="2_f2qmq"]
+[ext_resource type="Texture2D" uid="uid://cj25gwuxbma7c" path="res://Assets/bg/Sunnyboy.png" id="2_w3cnh"]
+[ext_resource type="Texture2D" uid="uid://muw8ljfe0nma" path="res://Assets/bg/Sternchen.png" id="3_8uwhj"]
+[ext_resource type="PackedScene" uid="uid://geaikcwsykik" path="res://Scenes/Popups/popup_einfuehrung_addition.tscn" id="3_hljeo"]
+[ext_resource type="PackedScene" uid="uid://b25nx0mr1iky5" path="res://Scenes/Popups/popup_einfuehrung_subtraktion.tscn" id="4_db55t"]
+[ext_resource type="PackedScene" uid="uid://cm8v00qmr1y6p" path="res://Scenes/Popups/popup_platzhalteraufgaben_5.tscn" id="5_aalh7"]
+
+[node name="zw_EinfuehrungAdditionSubtraktion" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Zwischenmenue" parent="." instance=ExtResource("1_ns7vd")]
+layout_mode = 1
+titel = "Addition und Subtraktion"
+
+[node name="DesignGrafiken" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RosaBrille" type="TextureRect" parent="DesignGrafiken"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 150.0
+offset_right = 475.0
+offset_bottom = 425.0
+texture = ExtResource("2_w3cnh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sternchen1" type="TextureRect" parent="DesignGrafiken"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 1250.0
+offset_right = 470.0
+offset_bottom = 1320.0
+texture = ExtResource("3_8uwhj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sternchen2" type="TextureRect" parent="DesignGrafiken"]
+layout_mode = 0
+offset_left = 1800.0
+offset_top = 800.0
+offset_right = 1850.0
+offset_bottom = 850.0
+texture = ExtResource("3_8uwhj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MenuButton_allg1" parent="." instance=ExtResource("2_f2qmq")]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 550.0
+offset_right = 744.0
+offset_bottom = 1124.0
+string = "Einführung|der Addition"
+seitenzahlen = "S. 18"
+link = ExtResource("3_hljeo")
+
+[node name="MenuButton_allg2" parent="." instance=ExtResource("2_f2qmq")]
+layout_mode = 0
+offset_left = 794.0
+offset_top = 550.0
+offset_right = 1254.0
+offset_bottom = 1124.0
+string = "Einführung|der Subtraktion"
+seitenzahlen = "S. 19"
+link = ExtResource("4_db55t")
+
+[node name="MenuButton_allg3" parent="." instance=ExtResource("2_f2qmq")]
+layout_mode = 0
+offset_left = 1304.0
+offset_top = 550.0
+offset_right = 1764.0
+offset_bottom = 1124.0
+string = "Platzhalter-|aufgaben|bis 5"
+seitenzahlen = "S. 24 - 25"
+link = ExtResource("5_aalh7")

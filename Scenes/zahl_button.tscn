@@ -1,0 +1,223 @@
+[gd_scene format=3 uid="uid://edj216owcc58"]
+
+[ext_resource type="Theme" uid="uid://pvywg5bjxo2y" path="res://Theme/label.tres" id="1_fhdev"]
+[ext_resource type="Script" uid="uid://bqt16v2jyegk1" path="res://Scripts/zahl_button.gd" id="1_u1jhk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wqqi"]
+bg_color = Color(0.27451, 0.27451, 0.27451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_il8km"]
+bg_color = Color(0.27451, 0.27451, 0.27451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2jj6l"]
+bg_color = Color(0.27451, 0.27451, 0.27451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_84rx8"]
+bg_color = Color(0.27451, 0.27451, 0.27451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_it1hm"]
+bg_color = Color(0.980392, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_056no"]
+bg_color = Color(1, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ddyb"]
+size = Vector2(143, 147)
+
+[node name="ZahlButton" type="Button" unique_id=1999307547 groups=["Button"]]
+offset_right = 160.0
+offset_bottom = 160.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0wqqi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_il8km")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2jj6l")
+theme_override_styles/focus = SubResource("StyleBoxFlat_84rx8")
+script = ExtResource("1_u1jhk")
+
+[node name="Label" type="Label" parent="." unique_id=1086289328]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 160.0
+offset_bottom = 170.0
+theme = ExtResource("1_fhdev")
+theme_override_colors/font_color = Color(0.901961, 0.901961, 0.901961, 1)
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GrafikAnzeige" type="TextureRect" parent="." unique_id=2122745393]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 150.0
+offset_bottom = 150.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StrichlistenAnzeige" type="TextureRect" parent="." unique_id=1858411149]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 135.0
+offset_bottom = 135.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Rakete" type="Control" parent="." unique_id=1505281181]
+anchors_preset = 0
+offset_left = 65.0
+offset_top = 5.0
+offset_right = 95.0
+offset_bottom = 155.0
+mouse_filter = 2
+
+[node name="Label5" type="Label" parent="Rakete" unique_id=1215750213]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 30.0
+offset_bottom = 32.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_it1hm")
+
+[node name="Label4" type="Label" parent="Rakete" unique_id=304093822]
+layout_mode = 0
+offset_top = 31.0
+offset_right = 30.0
+offset_bottom = 61.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_it1hm")
+
+[node name="Label3" type="Label" parent="Rakete" unique_id=304670272]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 30.0
+offset_bottom = 90.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_it1hm")
+
+[node name="Label2" type="Label" parent="Rakete" unique_id=1088283995]
+layout_mode = 0
+offset_top = 89.0
+offset_right = 30.0
+offset_bottom = 119.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_it1hm")
+
+[node name="Label1" type="Label" parent="Rakete" unique_id=885608369]
+layout_mode = 0
+offset_top = 118.0
+offset_right = 30.0
+offset_bottom = 148.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_it1hm")
+
+[node name="Kugeln" type="Control" parent="." unique_id=2096978429]
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 65.0
+offset_right = 155.0
+offset_bottom = 95.0
+mouse_filter = 2
+
+[node name="Label1" type="Label" parent="Kugeln" unique_id=463675774]
+layout_mode = 0
+offset_right = 30.0
+offset_bottom = 30.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_056no")
+
+[node name="Label2" type="Label" parent="Kugeln" unique_id=462776735]
+layout_mode = 0
+offset_left = 30.0
+offset_right = 60.0
+offset_bottom = 30.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_056no")
+
+[node name="Label3" type="Label" parent="Kugeln" unique_id=1597858694]
+layout_mode = 0
+offset_left = 60.0
+offset_right = 90.0
+offset_bottom = 30.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_056no")
+
+[node name="Label4" type="Label" parent="Kugeln" unique_id=1024521397]
+layout_mode = 0
+offset_left = 90.0
+offset_right = 120.0
+offset_bottom = 30.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_056no")
+
+[node name="Label5" type="Label" parent="Kugeln" unique_id=846065510]
+layout_mode = 0
+offset_left = 120.0
+offset_right = 150.0
+offset_bottom = 30.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_056no")
+
+[node name="Gestrichen" type="Control" parent="." unique_id=524275664]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="K1gestrichen" type="Line2D" parent="Gestrichen" unique_id=37392387]
+points = PackedVector2Array(5, 100, 35, 60)
+width = 5.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="K2gestrichen" type="Line2D" parent="Gestrichen" unique_id=1529801721]
+position = Vector2(30, 0)
+points = PackedVector2Array(5, 100, 35, 60)
+width = 5.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="K3gestrichen" type="Line2D" parent="Gestrichen" unique_id=1916277202]
+position = Vector2(61, 0)
+points = PackedVector2Array(5, 100, 35, 60)
+width = 5.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="K4gestrichen" type="Line2D" parent="Gestrichen" unique_id=869578019]
+position = Vector2(90, 0)
+points = PackedVector2Array(5, 100, 35, 60)
+width = 5.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="K5gestrichen" type="Line2D" parent="Gestrichen" unique_id=1664759408]
+position = Vector2(120, 0)
+points = PackedVector2Array(5, 100, 35, 60)
+width = 5.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2060876021 groups=["Button"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1121500349]
+position = Vector2(80.5, 80.5)
+shape = SubResource("RectangleShape2D_6ddyb")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]

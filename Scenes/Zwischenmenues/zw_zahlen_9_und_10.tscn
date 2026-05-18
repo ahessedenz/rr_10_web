@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=3 uid="uid://dlfpqeokjxv5t"]
+
+[ext_resource type="PackedScene" uid="uid://djg36nrbf8nu8" path="res://Scenes/Zwischenmenues/zwischenmenue.tscn" id="1_r6cck"]
+[ext_resource type="Texture2D" uid="uid://smnqoplkud3j" path="res://Assets/bg/Sternenmann.png" id="2_al4px"]
+[ext_resource type="PackedScene" uid="uid://c6p14qk30x4gf" path="res://Scenes/menu_button_allg.tscn" id="2_h31uf"]
+[ext_resource type="PackedScene" uid="uid://dtw4y4c4whn4a" path="res://Scenes/Popups/popup_zerlegen_der_9_und_10.tscn" id="3_6of3g"]
+[ext_resource type="Texture2D" uid="uid://muw8ljfe0nma" path="res://Assets/bg/Sternchen.png" id="3_q0gc5"]
+[ext_resource type="PackedScene" uid="uid://cp08oq3gvaxgg" path="res://Scenes/Popups/popup_addieren_subtrahieren_10.tscn" id="4_otdd2"]
+[ext_resource type="PackedScene" uid="uid://cuwcbp3atpnnn" path="res://Scenes/Popups/popup_kettenaufgaben.tscn" id="5_e4pm3"]
+
+[node name="zw_Zahlen9und10" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Zwischenmenue" parent="." instance=ExtResource("1_r6cck")]
+layout_mode = 1
+titel = "Die Zahlen 9 und 10"
+
+[node name="DesignGrafiken" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sternenmann" type="TextureRect" parent="DesignGrafiken"]
+layout_mode = 0
+offset_left = 1600.0
+offset_top = 175.0
+offset_right = 1875.0
+offset_bottom = 450.0
+texture = ExtResource("2_al4px")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="Sternchen1" type="TextureRect" parent="DesignGrafiken"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 1250.0
+offset_right = 470.0
+offset_bottom = 1320.0
+texture = ExtResource("3_q0gc5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sternchen2" type="TextureRect" parent="DesignGrafiken"]
+layout_mode = 0
+offset_left = 1800.0
+offset_top = 800.0
+offset_right = 1850.0
+offset_bottom = 850.0
+texture = ExtResource("3_q0gc5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MenuButton_allg1" parent="." instance=ExtResource("2_h31uf")]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 550.0
+offset_right = 744.0
+offset_bottom = 1124.0
+string = "Zerlegen|der 9|und 10"
+seitenzahlen = "S. 54"
+link = ExtResource("3_6of3g")
+
+[node name="MenuButton_allg2" parent="." instance=ExtResource("2_h31uf")]
+layout_mode = 0
+offset_left = 794.0
+offset_top = 550.0
+offset_right = 1254.0
+offset_bottom = 1124.0
+string = "Addieren und|Subtrahieren|bis 10"
+seitenzahlen = "S. 57"
+link = ExtResource("4_otdd2")
+
+[node name="MenuButton_allg3" parent="." instance=ExtResource("2_h31uf")]
+layout_mode = 0
+offset_left = 1304.0
+offset_top = 550.0
+offset_right = 1764.0
+offset_bottom = 1124.0
+string = "Kettenaufgaben"
+seitenzahlen = "S. 60"
+link = ExtResource("5_e4pm3")

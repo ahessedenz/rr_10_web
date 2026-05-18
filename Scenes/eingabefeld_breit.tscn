@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0d6xccdnn3oe"]
+
+[ext_resource type="Script" path="res://Scripts/eingabefeld_breit.gd" id="1_p3nak"]
+[ext_resource type="Theme" uid="uid://pvywg5bjxo2y" path="res://Theme/label.tres" id="1_xflwj"]
+[ext_resource type="AudioStream" uid="uid://buvudypvkad8w" path="res://Assets/sounds/LQ_Correct_Answer_03.wav" id="2_amatb"]
+[ext_resource type="AudioStream" uid="uid://dk43x8yrive2i" path="res://Assets/sounds/LQ_Wrong_Answer_02.wav" id="3_1i4fs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bfmnf"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cow2m"]
+size = Vector2(411, 220)
+
+[node name="EingabefeldBreit" type="Label" groups=["Eingabefeld"]]
+offset_right = 450.0
+offset_bottom = 250.0
+mouse_filter = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_bfmnf")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_p3nak")
+
+[node name="Anzeigefeld" type="Label" parent="."]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 450.0
+offset_bottom = 260.0
+theme = ExtResource("1_xflwj")
+theme_override_font_sizes/font_size = 150
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GrafikAnzeige" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 440.0
+offset_bottom = 240.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StrichlistenAnzeige" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 35.0
+offset_right = 215.0
+offset_bottom = 215.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StrichlistenAnzeige2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 35.0
+offset_right = 415.0
+offset_bottom = 215.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ResetTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Richtig" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_amatb")
+
+[node name="Falsch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1i4fs")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(223.5, 123)
+shape = SubResource("RectangleShape2D_cow2m")
+
+[connection signal="timeout" from="ResetTimer" to="." method="_on_reset_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

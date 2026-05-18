@@ -1,0 +1,146 @@
+[gd_scene load_steps=9 format=3 uid="uid://c46wubbelkgn6"]
+
+[ext_resource type="Theme" uid="uid://pvywg5bjxo2y" path="res://Theme/label.tres" id="1_4od24"]
+[ext_resource type="Script" path="res://Scripts/zahl_button_breit.gd" id="1_668i5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b3y1c"]
+bg_color = Color(0.27451, 0.27451, 0.27451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebv6u"]
+bg_color = Color(0.27451, 0.27451, 0.27451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_73x1w"]
+bg_color = Color(0.27451, 0.27451, 0.27451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n3svl"]
+bg_color = Color(0.27451, 0.27451, 0.27451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33xrk"]
+bg_color = Color(0.980392, 0.196078, 0.196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tyn32"]
+size = Vector2(268, 144)
+
+[node name="ZahlButtonBreit" type="Button"]
+offset_right = 290.0
+offset_bottom = 160.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_b3y1c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ebv6u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_73x1w")
+theme_override_styles/focus = SubResource("StyleBoxFlat_n3svl")
+script = ExtResource("1_668i5")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 160.0
+offset_bottom = 170.0
+theme = ExtResource("1_4od24")
+theme_override_colors/font_color = Color(0.901961, 0.901961, 0.901961, 1)
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GrafikAnzeige" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 280.0
+offset_bottom = 150.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StrichlistenAnzeige" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 135.0
+offset_bottom = 135.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StrichlistenAnzeige2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 25.0
+offset_right = 265.0
+offset_bottom = 135.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Rakete" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 65.0
+offset_top = 5.0
+offset_right = 95.0
+offset_bottom = 155.0
+mouse_filter = 2
+
+[node name="Label10" type="Label" parent="Rakete"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 30.0
+offset_bottom = 32.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_33xrk")
+
+[node name="Label9" type="Label" parent="Rakete"]
+layout_mode = 0
+offset_top = 31.0
+offset_right = 30.0
+offset_bottom = 61.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_33xrk")
+
+[node name="Label8" type="Label" parent="Rakete"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 30.0
+offset_bottom = 90.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_33xrk")
+
+[node name="Label7" type="Label" parent="Rakete"]
+layout_mode = 0
+offset_top = 89.0
+offset_right = 30.0
+offset_bottom = 119.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_33xrk")
+
+[node name="Label6" type="Label" parent="Rakete"]
+layout_mode = 0
+offset_top = 118.0
+offset_right = 30.0
+offset_bottom = 148.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_33xrk")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(146, 80)
+shape = SubResource("RectangleShape2D_tyn32")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]

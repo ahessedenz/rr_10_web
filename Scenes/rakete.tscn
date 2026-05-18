@@ -1,0 +1,103 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4xwwnlhu1snb"]
+
+[ext_resource type="Script" path="res://Scripts/rakete.gd" id="1_8oedd"]
+[ext_resource type="PackedScene" uid="uid://blwo64m4e46js" path="res://Scenes/raketenquadrat.tscn" id="1_d8us6"]
+[ext_resource type="AudioStream" uid="uid://buvudypvkad8w" path="res://Assets/sounds/LQ_Correct_Answer_03.wav" id="3_08cao"]
+[ext_resource type="AudioStream" uid="uid://dk43x8yrive2i" path="res://Assets/sounds/LQ_Wrong_Answer_02.wav" id="4_f2wu5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8l5uq"]
+size = Vector2(129, 624)
+
+[node name="Rakete" type="Label" groups=["Eingabefeld"]]
+offset_right = 160.0
+offset_bottom = 635.0
+mouse_filter = 0
+script = ExtResource("1_8oedd")
+
+[node name="Spitze" type="Polygon2D" parent="."]
+position = Vector2(10, 0)
+color = Color(0.980392, 0.196078, 0.196078, 1)
+polygon = PackedVector2Array(70, 11, 140, 100, 0, 100)
+
+[node name="Spitze_Outline" type="Line2D" parent="."]
+position = Vector2(10, 0)
+points = PackedVector2Array(70, 11, 140, 100, 0, 100, 70, 11)
+width = 2.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Raketenquadrat5" parent="." instance=ExtResource("1_d8us6")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 100.0
+offset_right = 130.0
+offset_bottom = 200.0
+
+[node name="Raketenquadrat4" parent="." instance=ExtResource("1_d8us6")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 200.0
+offset_right = 130.0
+offset_bottom = 300.0
+
+[node name="Raketenquadrat3" parent="." instance=ExtResource("1_d8us6")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 300.0
+offset_right = 130.0
+offset_bottom = 400.0
+
+[node name="Raketenquadrat2" parent="." instance=ExtResource("1_d8us6")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 400.0
+offset_right = 130.0
+offset_bottom = 500.0
+
+[node name="Raketenquadrat1" parent="." instance=ExtResource("1_d8us6")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 500.0
+offset_right = 130.0
+offset_bottom = 600.0
+
+[node name="Duese_links" type="Polygon2D" parent="."]
+position = Vector2(10, 0)
+color = Color(0.980392, 0.196078, 0.196078, 1)
+polygon = PackedVector2Array(30, 600, 56, 600, 66, 625, 20, 625)
+
+[node name="Duese_rechts" type="Polygon2D" parent="."]
+position = Vector2(64, 0)
+color = Color(0.980392, 0.196078, 0.196078, 1)
+polygon = PackedVector2Array(30, 600, 56, 600, 66, 625, 20, 625)
+
+[node name="Duese_links_Outline" type="Line2D" parent="."]
+position = Vector2(10, 0)
+points = PackedVector2Array(30, 600, 56, 600, 66, 625, 20, 625, 30, 600)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Duese_rechts_Outline" type="Line2D" parent="."]
+position = Vector2(64, 0)
+points = PackedVector2Array(30, 600, 56, 600, 66, 625, 20, 625, 30, 600)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="ResetTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Richtig" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_08cao")
+
+[node name="Falsch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_f2wu5")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(79.5, 321)
+shape = SubResource("RectangleShape2D_8l5uq")
+
+[connection signal="timeout" from="ResetTimer" to="." method="_on_reset_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

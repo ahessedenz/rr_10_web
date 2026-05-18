@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://3fdma24dkgqp"]
+
+[ext_resource type="Script" path="res://Scripts/aufgaben_grundgeruest.gd" id="1_0ivpi"]
+[ext_resource type="PackedScene" uid="uid://f1fjyyqrtfq8" path="res://Scenes/hintergrund.tscn" id="1_ix571"]
+[ext_resource type="Texture2D" uid="uid://bd4yh3twry6ru" path="res://Assets/buttons/Button_zurueck.png" id="3_w3qv7"]
+[ext_resource type="PackedScene" uid="uid://bqjl0evaa0dd3" path="res://Scenes/sound_button.tscn" id="5_24pie"]
+
+[node name="AufgabenGrundgeruest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ivpi")
+
+[node name="Hintergrund" parent="." instance=ExtResource("1_ix571")]
+layout_mode = 0
+
+[node name="ZurueckButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 46.0
+offset_right = 200.0
+offset_bottom = 206.0
+focus_mode = 0
+icon = ExtResource("3_w3qv7")
+flat = true
+expand_icon = true
+
+[node name="SoundButton" parent="." instance=ExtResource("5_24pie")]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 1372.0
+offset_right = 160.0
+offset_bottom = 1492.0
+
+[node name="NaechsteAufgabeTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="pressed" from="ZurueckButton" to="." method="_on_zurueck_button_pressed"]
+[connection signal="timeout" from="NaechsteAufgabeTimer" to="." method="_on_naechste_aufgabe_timer_timeout"]

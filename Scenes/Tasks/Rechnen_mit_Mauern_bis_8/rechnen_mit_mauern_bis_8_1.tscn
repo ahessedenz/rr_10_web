@@ -1,0 +1,216 @@
+[gd_scene load_steps=10 format=3 uid="uid://djev5at3mtmf"]
+
+[ext_resource type="PackedScene" uid="uid://3fdma24dkgqp" path="res://Scenes/aufgaben_grundgeruest.tscn" id="1_kukjc"]
+[ext_resource type="Script" path="res://Scripts/rechnen_mit_mauern_bis_8_1.gd" id="1_vexti"]
+[ext_resource type="Texture2D" uid="uid://dcl2pcf53675i" path="res://Assets/Zahlenmauer/Zahlenmauer_Klotz_freigestellt.png" id="2_ibv7c"]
+[ext_resource type="Theme" uid="uid://pvywg5bjxo2y" path="res://Theme/label.tres" id="2_nh1je"]
+[ext_resource type="PackedScene" uid="uid://b8eyh5e47d66r" path="res://Scenes/eingabefeld_zahl.tscn" id="3_dbwhb"]
+[ext_resource type="Texture2D" uid="uid://nvop5q44dvpl" path="res://Assets/bg/Ufo2.png" id="3_osetw"]
+[ext_resource type="Texture2D" uid="uid://muw8ljfe0nma" path="res://Assets/bg/Sternchen.png" id="4_hb8ag"]
+[ext_resource type="PackedScene" uid="uid://edj216owcc58" path="res://Scenes/zahl_button.tscn" id="4_xeyji"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4bff"]
+bg_color = Color(0, 0, 0, 0.392157)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="RechnenMitMauernBis8_1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vexti")
+
+[node name="AufgabenGrundgeruest" parent="." instance=ExtResource("1_kukjc")]
+layout_mode = 1
+
+[node name="Hintergrundbilder" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Ufo" type="TextureRect" parent="Hintergrundbilder"]
+offset_left = 1600.0
+offset_top = 150.0
+offset_right = 1875.0
+offset_bottom = 425.0
+texture = ExtResource("3_osetw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sternchen1" type="TextureRect" parent="Hintergrundbilder"]
+offset_left = 150.0
+offset_top = 331.0
+offset_right = 234.0
+offset_bottom = 422.0
+texture = ExtResource("4_hb8ag")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Sternchen2" type="TextureRect" parent="Hintergrundbilder"]
+offset_left = 1800.0
+offset_top = 900.0
+offset_right = 1860.0
+offset_bottom = 960.0
+texture = ExtResource("4_hb8ag")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AufgabenPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 612.0
+offset_top = 450.0
+offset_right = 1436.0
+offset_bottom = 950.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o4bff")
+
+[node name="MauerGrafiken" type="Control" parent="AufgabenPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BlockUntenLinks" type="TextureRect" parent="AufgabenPanel/MauerGrafiken"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 225.0
+offset_right = 370.0
+offset_bottom = 369.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_ibv7c")
+
+[node name="Label" type="Label" parent="AufgabenPanel/MauerGrafiken/BlockUntenLinks"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 48.0
+offset_right = 143.0
+offset_bottom = 151.0
+theme = ExtResource("2_nh1je")
+theme_override_font_sizes/font_size = 80
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BlockUntenRechts" type="TextureRect" parent="AufgabenPanel/MauerGrafiken"]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 225.0
+offset_right = 589.0
+offset_bottom = 369.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_ibv7c")
+
+[node name="Label" type="Label" parent="AufgabenPanel/MauerGrafiken/BlockUntenRechts"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 48.0
+offset_right = 143.0
+offset_bottom = 151.0
+theme = ExtResource("2_nh1je")
+theme_override_font_sizes/font_size = 80
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BlockOben" type="TextureRect" parent="AufgabenPanel/MauerGrafiken"]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 63.0
+offset_right = 477.0
+offset_bottom = 207.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_ibv7c")
+
+[node name="Eingabefeld_Zahl" parent="AufgabenPanel/MauerGrafiken/BlockOben" instance=ExtResource("3_dbwhb")]
+layout_mode = 0
+offset_left = 1.33334
+offset_top = 36.6667
+offset_right = 161.333
+offset_bottom = 196.667
+scale = Vector2(0.6, 0.6)
+laenge = 1
+zahlenmauer = true
+
+[node name="Zahlbuttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ZahlButton0" parent="Zahlbuttons" instance=ExtResource("4_xeyji")]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 1200.0
+offset_right = 384.0
+offset_bottom = 1360.0
+index = "0"
+
+[node name="ZahlButton1" parent="Zahlbuttons" instance=ExtResource("4_xeyji")]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 1200.0
+offset_right = 564.0
+offset_bottom = 1360.0
+index = "1"
+
+[node name="ZahlButton2" parent="Zahlbuttons" instance=ExtResource("4_xeyji")]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 1200.0
+offset_right = 744.0
+offset_bottom = 1360.0
+index = "2"
+
+[node name="ZahlButton3" parent="Zahlbuttons" instance=ExtResource("4_xeyji")]
+layout_mode = 0
+offset_left = 764.0
+offset_top = 1200.0
+offset_right = 924.0
+offset_bottom = 1360.0
+index = "3"
+
+[node name="ZahlButton4" parent="Zahlbuttons" instance=ExtResource("4_xeyji")]
+layout_mode = 0
+offset_left = 944.0
+offset_top = 1200.0
+offset_right = 1104.0
+offset_bottom = 1360.0
+index = "4"
+
+[node name="ZahlButton5" parent="Zahlbuttons" instance=ExtResource("4_xeyji")]
+layout_mode = 0
+offset_left = 1124.0
+offset_top = 1200.0
+offset_right = 1284.0
+offset_bottom = 1360.0
+index = "5"
+
+[node name="ZahlButton6" parent="Zahlbuttons" instance=ExtResource("4_xeyji")]
+layout_mode = 0
+offset_left = 1304.0
+offset_top = 1200.0
+offset_right = 1464.0
+offset_bottom = 1360.0
+index = "6"
+
+[node name="ZahlButton7" parent="Zahlbuttons" instance=ExtResource("4_xeyji")]
+layout_mode = 0
+offset_left = 1484.0
+offset_top = 1200.0
+offset_right = 1644.0
+offset_bottom = 1360.0
+index = "7"
+
+[node name="ZahlButton8" parent="Zahlbuttons" instance=ExtResource("4_xeyji")]
+layout_mode = 0
+offset_left = 1664.0
+offset_top = 1200.0
+offset_right = 1824.0
+offset_bottom = 1360.0
+index = "8"

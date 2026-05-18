@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://blwo64m4e46js"]
+
+[ext_resource type="Script" path="res://Scripts/raketenquadrat.gd" id="1_uxudb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sxswl"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="Raketenquadrat" type="Label"]
+offset_right = 100.0
+offset_bottom = 100.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_sxswl")
+script = ExtResource("1_uxudb")

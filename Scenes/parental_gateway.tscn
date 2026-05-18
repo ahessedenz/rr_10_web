@@ -1,0 +1,355 @@
+[gd_scene load_steps=13 format=3 uid="uid://cv8rulrx2k8jw"]
+
+[ext_resource type="Script" path="res://Scripts/parental_gateway.gd" id="1_upvpu"]
+[ext_resource type="Texture2D" uid="uid://di3o4llsl7ecb" path="res://Assets/background/Rahmen.png" id="1_yxnvd"]
+[ext_resource type="FontFile" uid="uid://cx2yb8j83mv5l" path="res://Assets/Fonts/Grundschrift-Bold.otf" id="2_rfg31"]
+[ext_resource type="PackedScene" uid="uid://edj216owcc58" path="res://Scenes/zahl_button.tscn" id="3_gprvo"]
+[ext_resource type="Texture2D" uid="uid://bd4yh3twry6ru" path="res://Assets/buttons/Button_zurueck.png" id="4_l7eyq"]
+[ext_resource type="AudioStream" uid="uid://buvudypvkad8w" path="res://Assets/sounds/LQ_Correct_Answer_03.wav" id="5_u2s6q"]
+[ext_resource type="AudioStream" uid="uid://dk43x8yrive2i" path="res://Assets/sounds/LQ_Wrong_Answer_02.wav" id="6_ogd4t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1eao0"]
+bg_color = Color(1, 0.698039, 0.141176, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qyvv"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24md1"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 75
+corner_radius_top_right = 75
+corner_radius_bottom_right = 75
+corner_radius_bottom_left = 75
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpb0h"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lirpv"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.784314, 0.784314, 0.784314, 1)
+
+[node name="parentalGateway" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_upvpu")
+
+[node name="background" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="rahmen" type="TextureRect" parent="background"]
+layout_mode = 0
+offset_right = 2048.0
+offset_bottom = 1536.0
+texture = ExtResource("1_yxnvd")
+
+[node name="bgColor" type="ColorRect" parent="background"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 44.0
+offset_right = 2010.0
+offset_bottom = 1494.0
+color = Color(0.690196, 0.87451, 1, 1)
+
+[node name="Header" type="Label" parent="."]
+layout_mode = 0
+offset_top = 44.0
+offset_right = 2048.0
+offset_bottom = 244.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rfg31")
+theme_override_font_sizes/font_size = 80
+text = "Elternzugang"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Aufgabe" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 600.0
+offset_right = 1874.0
+offset_bottom = 900.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1eao0")
+
+[node name="zahl1" type="Label" parent="Aufgabe"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 75.0
+offset_right = 350.0
+offset_bottom = 227.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rfg31")
+theme_override_font_sizes/font_size = 120
+theme_override_styles/normal = SubResource("StyleBoxFlat_4qyvv")
+text = "1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="zahl2" type="Label" parent="Aufgabe"]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 75.0
+offset_right = 900.0
+offset_bottom = 227.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rfg31")
+theme_override_font_sizes/font_size = 120
+theme_override_styles/normal = SubResource("StyleBoxFlat_4qyvv")
+text = "1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="plus" type="Label" parent="Aufgabe"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 75.0
+offset_right = 550.0
+offset_bottom = 227.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rfg31")
+theme_override_font_sizes/font_size = 120
+theme_override_styles/normal = SubResource("StyleBoxFlat_24md1")
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="gleich" type="Label" parent="Aufgabe"]
+layout_mode = 0
+offset_left = 950.0
+offset_top = 75.0
+offset_right = 1100.0
+offset_bottom = 227.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rfg31")
+theme_override_font_sizes/font_size = 120
+text = "="
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ergebnis" type="Control" parent="Aufgabe"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Aufgabe/Ergebnis"]
+layout_mode = 0
+offset_left = 1150.0
+offset_top = 70.0
+offset_right = 1650.0
+offset_bottom = 250.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_vpb0h")
+
+[node name="GesamtT" type="Label" parent="Aufgabe/Ergebnis/Label"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 130.0
+offset_bottom = 170.0
+mouse_filter = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_lirpv")
+
+[node name="Label" type="Label" parent="Aufgabe/Ergebnis/Label/GesamtT"]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 120.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rfg31")
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GesamtH" type="Label" parent="Aufgabe/Ergebnis/Label"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 10.0
+offset_right = 250.0
+offset_bottom = 170.0
+mouse_filter = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_lirpv")
+
+[node name="Label" type="Label" parent="Aufgabe/Ergebnis/Label/GesamtH"]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 120.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rfg31")
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GesamtZ" type="Label" parent="Aufgabe/Ergebnis/Label"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 10.0
+offset_right = 370.0
+offset_bottom = 170.0
+mouse_filter = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_lirpv")
+
+[node name="Label" type="Label" parent="Aufgabe/Ergebnis/Label/GesamtZ"]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 120.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rfg31")
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GesamtE" type="Label" parent="Aufgabe/Ergebnis/Label"]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 10.0
+offset_right = 490.0
+offset_bottom = 170.0
+mouse_filter = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_lirpv")
+
+[node name="Label" type="Label" parent="Aufgabe/Ergebnis/Label/GesamtE"]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 120.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rfg31")
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rechenbuttons" type="Node2D" parent="."]
+
+[node name="ZahlButton0" parent="Rechenbuttons" instance=ExtResource("3_gprvo")]
+offset_left = 142.0
+offset_top = 1100.0
+offset_right = 302.0
+offset_bottom = 1260.0
+index = "0"
+
+[node name="ZahlButton1" parent="Rechenbuttons" instance=ExtResource("3_gprvo")]
+offset_left = 320.8
+offset_top = 1100.0
+offset_right = 480.8
+offset_bottom = 1260.0
+index = "1"
+
+[node name="ZahlButton2" parent="Rechenbuttons" instance=ExtResource("3_gprvo")]
+offset_left = 499.6
+offset_top = 1100.0
+offset_right = 659.6
+offset_bottom = 1260.0
+index = "2"
+
+[node name="ZahlButton3" parent="Rechenbuttons" instance=ExtResource("3_gprvo")]
+offset_left = 678.4
+offset_top = 1100.0
+offset_right = 838.4
+offset_bottom = 1260.0
+index = "3"
+
+[node name="ZahlButton4" parent="Rechenbuttons" instance=ExtResource("3_gprvo")]
+offset_left = 857.2
+offset_top = 1100.0
+offset_right = 1017.2
+offset_bottom = 1260.0
+index = "4"
+
+[node name="ZahlButton5" parent="Rechenbuttons" instance=ExtResource("3_gprvo")]
+offset_left = 1036.0
+offset_top = 1100.0
+offset_right = 1196.0
+offset_bottom = 1260.0
+index = "5"
+
+[node name="ZahlButton6" parent="Rechenbuttons" instance=ExtResource("3_gprvo")]
+offset_left = 1214.8
+offset_top = 1100.0
+offset_right = 1374.8
+offset_bottom = 1260.0
+index = "6"
+
+[node name="ZahlButton7" parent="Rechenbuttons" instance=ExtResource("3_gprvo")]
+offset_left = 1393.6
+offset_top = 1100.0
+offset_right = 1553.6
+offset_bottom = 1260.0
+index = "7"
+
+[node name="ZahlButton8" parent="Rechenbuttons" instance=ExtResource("3_gprvo")]
+offset_left = 1572.4
+offset_top = 1100.0
+offset_right = 1732.4
+offset_bottom = 1260.0
+index = "8"
+
+[node name="ZahlButton9" parent="Rechenbuttons" instance=ExtResource("3_gprvo")]
+offset_left = 1749.0
+offset_top = 1100.0
+offset_right = 1909.0
+offset_bottom = 1260.0
+index = "9"
+
+[node name="backButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 46.0
+offset_right = 200.0
+offset_bottom = 206.0
+focus_mode = 0
+icon = ExtResource("4_l7eyq")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Soundeffekte" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Richtig" type="AudioStreamPlayer" parent="Soundeffekte"]
+stream = ExtResource("5_u2s6q")
+
+[node name="Falsch" type="AudioStreamPlayer" parent="Soundeffekte"]
+stream = ExtResource("6_ogd4t")
+
+[connection signal="mouse_entered" from="Aufgabe/Ergebnis/Label/GesamtT" to="." method="_on_gesamt_t_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe/Ergebnis/Label/GesamtT" to="." method="_on_gesamt_t_mouse_exited"]
+[connection signal="mouse_entered" from="Aufgabe/Ergebnis/Label/GesamtH" to="." method="_on_gesamt_h_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe/Ergebnis/Label/GesamtH" to="." method="_on_gesamt_h_mouse_exited"]
+[connection signal="mouse_entered" from="Aufgabe/Ergebnis/Label/GesamtZ" to="." method="_on_gesamt_z_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe/Ergebnis/Label/GesamtZ" to="." method="_on_gesamt_z_mouse_exited"]
+[connection signal="mouse_entered" from="Aufgabe/Ergebnis/Label/GesamtE" to="." method="_on_gesamt_e_mouse_entered"]
+[connection signal="mouse_exited" from="Aufgabe/Ergebnis/Label/GesamtE" to="." method="_on_gesamt_e_mouse_exited"]
+[connection signal="pressed" from="backButton" to="." method="_on_back_button_pressed"]
