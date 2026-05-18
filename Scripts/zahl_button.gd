@@ -353,7 +353,7 @@ func _setze_kugeln():
 
 func _resetButton():
 	global_position = ausgangsposition
-	mouse_filter = Control.MOUSE_FILTER_STOP
+#	mouse_filter = Control.MOUSE_FILTER_STOP
 	z_index = 0
 	dragmode = false
 	GlobaleVariablen.aktueller_button = null
@@ -361,7 +361,7 @@ func _resetButton():
 
 func _on_button_down():
 	GlobaleVariablen.aktueller_button = self
-	mouse_filter = Control.MOUSE_FILTER_IGNORE
+#	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	z_index = 1
 	dragmode = true
 	if get_parent().get_parent().name == "parentalGateway":
