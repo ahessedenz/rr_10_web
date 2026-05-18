@@ -357,6 +357,10 @@ func _resetButton():
 	z_index = 0
 	dragmode = false
 	GlobaleVariablen.aktueller_button = null
+	var ev := InputEventMouseButton.new()
+	ev.button_index = MOUSE_BUTTON_LEFT
+	ev.pressed = false
+	_gui_input(ev)
 
 
 func _on_button_down():
