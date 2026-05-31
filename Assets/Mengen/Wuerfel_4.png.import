@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Wuerfel_4.png-6d1cad99c6abbb58acb7e767f36ed66
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

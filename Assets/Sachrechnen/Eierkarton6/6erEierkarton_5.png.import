@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/6erEierkarton_5.png-95cee238f0ef7312cf6f5b03d
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

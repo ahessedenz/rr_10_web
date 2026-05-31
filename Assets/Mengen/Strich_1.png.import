@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Strich_1.png-bac387f644e08c35cf8cc22b4483099c
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

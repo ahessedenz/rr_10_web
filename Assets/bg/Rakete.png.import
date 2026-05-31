@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Rakete.png-f7d0cfd189585da6efd121da7b54f30c.c
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

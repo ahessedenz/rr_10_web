@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Hand_9.png-7ca0c25c0a8945f660e3a4272f14a7fd.c
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

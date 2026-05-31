@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Strich_3_Button.png-eddf7f9d2a15b18fcf1450c0a
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Steckwuerfel1.png-05e2ae0157117948a3f4c9db5fb
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

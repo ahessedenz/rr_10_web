@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Kreis.png-a9446fb1bfc9c807abb62ada1ca3b43a.ct
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

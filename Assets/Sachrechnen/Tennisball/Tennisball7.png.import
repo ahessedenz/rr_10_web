@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Tennisball7.png-c9a8fefe1442b44eeff8fd6d1ec13
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

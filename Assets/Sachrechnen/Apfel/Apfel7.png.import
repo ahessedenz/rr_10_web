@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Apfel7.png-661923026b759d8a1fc856e6e8a939b4.c
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

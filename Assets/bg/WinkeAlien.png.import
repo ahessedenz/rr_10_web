@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/WinkeAlien.png-2310b833c3c863fa2fb570f9448662
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

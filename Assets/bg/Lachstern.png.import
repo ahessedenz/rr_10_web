@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Lachstern.png-5727d7ac53f022f962ea0091c85d9a5
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

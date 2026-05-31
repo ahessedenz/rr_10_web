@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Buecher_4.png-68405c990025cf6051152cd7c5c6829
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

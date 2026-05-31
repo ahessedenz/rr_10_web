@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Klaus.png-9362295a321550ea83a0be7b25e66b5a.ct
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

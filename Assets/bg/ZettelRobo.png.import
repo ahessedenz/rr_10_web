@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/ZettelRobo.png-5f4e2c9f1dbab044800cca4699dc4d
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

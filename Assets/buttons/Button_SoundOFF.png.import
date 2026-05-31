@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Button_SoundOFF.png-c96f12d40ad660e61f4712942
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

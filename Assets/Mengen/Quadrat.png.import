@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Quadrat.png-c56f261ddf2bb299e387f1907bfda05e.
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
